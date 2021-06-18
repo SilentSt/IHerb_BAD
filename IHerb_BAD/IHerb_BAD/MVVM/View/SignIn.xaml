@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:behavior="clr-namespace:IHerb_BAD.MVVM.Support"
+             x:Class="IHerb_BAD.MVVM.View.SignIn"
+             NavigationPage.HasNavigationBar="False">
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="#ffeead">
+            <StackLayout Orientation="Horizontal">
+                <ImageButton Source="back.png" WidthRequest="40" BorderColor="Transparent" HorizontalOptions="Start" BackgroundColor="Transparent" Command="{Binding BackClick}" Margin="10"/>
+                <Label Text="Регистрация" FontSize="29" FontAttributes="Bold" TextColor="#618574" Margin="20"/>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Имя" Margin="15,10,15,0"/>
+                <Entry HorizontalOptions="FillAndExpand"/>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Фамилия" Margin="15,10,15,0"/>
+                <Entry HorizontalOptions="FillAndExpand"/>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Дата рождения" Margin="15,10,15,0"/>
+                <DatePicker HorizontalOptions="FillAndExpand"/>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Номер телефона" Margin="15,10,15,0"/>
+                <Entry HorizontalOptions="FillAndExpand">
+                    <Entry.Behaviors>
+                        <behavior:MaskedBehavior Mask="X (XXX) XXX-XX-XX"/>
+                    </Entry.Behaviors>
+                </Entry>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" Margin="10">
+                <Image Source="mail.png" WidthRequest="40"/>
+                <Entry Text="{Binding Login}" HorizontalOptions="FillAndExpand" TextColor="DarkSlateGray"/>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" Margin="10">
+                <Image Source="lock.png" WidthRequest="40"/>
+                <Entry IsPassword="True" Text="{Binding Password}" HorizontalOptions="FillAndExpand" TextColor="DarkSlateGray"/>
+            </StackLayout>
+            <Button Margin="35" CornerRadius="20" HeightRequest="50" Text="Зарегестрироваться" BackgroundColor="#CEA47D" TextColor="#618574"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

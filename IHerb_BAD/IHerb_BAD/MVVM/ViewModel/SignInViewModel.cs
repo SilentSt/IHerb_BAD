@@ -7,7 +7,7 @@ using Xamarin.Forms;
 
 namespace IHerb_BAD.MVVM.ViewModel
 {
-    class LoginViewModel : ObservableObject
+    class SignInViewModel : ObservableObject
     {
         public INavigation Navigation;
         private string _login;
@@ -15,7 +15,8 @@ namespace IHerb_BAD.MVVM.ViewModel
         public string Login
         {
             get { return _login; }
-            set{
+            set
+            {
                 if (_login != value)
                 {
                     _login = value;
@@ -25,7 +26,7 @@ namespace IHerb_BAD.MVVM.ViewModel
         }
 
         private string _password;
-        
+
         public string Password
         {
             get { return _password; }
@@ -39,7 +40,7 @@ namespace IHerb_BAD.MVVM.ViewModel
             }
         }
         public ICommand BackClick { get; set; }
-        public LoginViewModel()
+        public SignInViewModel()
         {
             BackClick = new Command(Back);
         }
