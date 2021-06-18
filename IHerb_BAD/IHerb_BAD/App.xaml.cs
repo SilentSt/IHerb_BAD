@@ -1,5 +1,5 @@
 ﻿using System;
-
+using IHerb_BAD.MVVM.View;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -10,8 +10,7 @@ namespace IHerb_BAD
         public App()
         {
             InitializeComponent();
-
-            MainPage = new MainPage();
+            MainPage = new NavigationPage(new Start());
         }
 
         protected override void OnStart()
