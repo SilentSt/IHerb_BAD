@@ -83,7 +83,6 @@
     <AndroidResource Include="Resources\mipmap-xxxhdpi\icon.png" />
     <AndroidResource Include="Resources\mipmap-xxxhdpi\launcher_foreground.png" />
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\IHerb_BAD\IHerb_BAD.csproj">
       <Project>{F803A2DE-635A-475C-8D2D-EC9B72CAFF27}</Project>
@@ -92,6 +91,18 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\I_HerbLogo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\mail.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\lock.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\back.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\StartLogo.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 </Project>
