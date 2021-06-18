@@ -10,12 +10,12 @@ using Xamarin.Forms.Xaml;
 namespace IHerb_BAD.MVVM.View
 {
 	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class LoginView : ContentPage
+	public partial class Start : ContentPage
 	{
-        public LoginView()
+		public Start()
 		{
 			InitializeComponent ();
-            this.BindingContext = new LoginViewModel(){Navigation = this.Navigation};
+            BindingContext = new StartViewModel() {Navigation = this.Navigation};
         }
 	}
 }
