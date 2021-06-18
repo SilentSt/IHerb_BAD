@@ -10,7 +10,13 @@ namespace IHerb_BAD
         public App()
         {
             InitializeComponent();
+<<<<<<< HEAD
             MainPage = new NavigationPage(new ProfileManager());
+=======
+
+            MainPage = new NavigationPage(new Start());
+
+>>>>>>> 3211033971b467bdfd4e7667b7d49a8fd2f1faff
         }
 
         protected override void OnStart()
