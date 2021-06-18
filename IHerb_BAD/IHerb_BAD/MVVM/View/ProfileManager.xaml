@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin"
+             x:Class="IHerb_BAD.MVVM.View.ProfileManager"
+             BackgroundColor="#CEA47D">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label
+                Text="Пользователь"
+                FontSize="23"
+                HorizontalOptions="Center"
+                FontAttributes="Bold"
+                Margin="0,20"
+                TextColor="#FFEEAD"/>
+            <ListView ItemsSource="{Binding Users}">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <local:CircleImage                           
+                    Source="{Binding UserImage}"               
+                    Aspect="AspectFit"
+                    WidthRequest="130"
+                    HeightRequest="130"
+                    BorderColor="#FFEEAD"
+                    BorderThickness="2"/>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            <Button
+                Margin="0,45"
+                HorizontalOptions="CenterAndExpand"
+                CornerRadius="65"
+                FontSize="150"
+                VerticalOptions="Center"
+                Command="{Binding AddUser}"
+                Text="+"           
+                BackgroundColor="#618574"
+                BorderWidth="2"
+                BorderColor="#FFEEAD"
+                WidthRequest="130"
+                HeightRequest="130"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
