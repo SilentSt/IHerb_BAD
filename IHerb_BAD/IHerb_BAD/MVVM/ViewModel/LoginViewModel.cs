@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.Windows.Input;
 using IHerb_BAD.MVVM.Core;
+using IHerb_BAD.MVVM.View;
 using Xamarin.Forms;
 
 namespace IHerb_BAD.MVVM.ViewModel
@@ -38,10 +39,20 @@ namespace IHerb_BAD.MVVM.ViewModel
                 }
             }
         }
+        public ICommand LoginClick { get; set; }
         public ICommand BackClick { get; set; }
         public LoginViewModel()
         {
             BackClick = new Command(Back);
+            LoginClick = new Command(Authorize);
+        }
+
+        public void Authorize()
+        {
+            if (Login == "admin" && Password == "admin")
+            {
+                Navigation.PushAsync(new ProfileManager());
+            }
         }
 
         public void Back()
