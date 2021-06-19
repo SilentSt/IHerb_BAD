@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:buttons="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms"
+             xmlns:border="clr-namespace:Syncfusion.XForms.Border;assembly=Syncfusion.Core.XForms"
+             xmlns:progressBar="clr-namespace:Syncfusion.XForms.ProgressBar;assembly=Syncfusion.SfProgressBar.XForms"
+             x:Class="IHerb_BAD.MVVM.View.MyDrags"
+             BackgroundColor="#CBE7DA"
+             NavigationPage.HasNavigationBar="False">
+    <ContentPage.Content>
+        <StackLayout Orientation="Vertical"
+                     VerticalOptions="FillAndExpand">
+            <ScrollView Orientation="Vertical">
+            <StackLayout 
+            Orientation="Vertical">
+                <StackLayout Orientation="Horizontal"
+                         HorizontalOptions="FillAndExpand"
+                         Margin="0,15,0,0"
+                         >
+                    <ImageButton 
+                            Source="LeftArrowDark.png" 
+                            WidthRequest="40" 
+                            BorderColor="Transparent" 
+                            HorizontalOptions="Start"
+                            BackgroundColor="Transparent"
+                            Command="{Binding BackClick}"
+                            Margin="10"/>
+                    <Label                    
+                            Text="Рекомендации"
+                            FontSize="25"
+                            Margin="15,10,0,0"
+                            WidthRequest="250"
+                            HorizontalTextAlignment="Center"
+                            TextColor="#618574"
+                            FontAttributes="Bold"
+                            FontFamily="Roboto"
+                        />
+                </StackLayout>
+                <border:SfBorder
+                    BorderColor="Transparent"
+                    BorderWidth="0"
+                    BorderThickness="0"
+                    HasShadow="True"
+                    ShadowColor="#000">
+
+
+                    <Frame 
+                    BackgroundColor="#FFF"
+                    Padding="10,5"
+                    >
+                        <StackLayout
+                        Orientation="Horizontal">
+                            <Image Source="{Binding DragImage}"
+                               HeightRequest="150"
+                               WidthRequest="120"/>
+                            <StackLayout
+                            Orientation="Vertical"
+                            VerticalOptions="Fill"
+                            Margin="10,0,0,0">
+                                <Label Text="{Binding DragName}"
+                                   TextColor="#618574"
+                                   FontAttributes="Bold"
+                                   FontSize="18"/>
+                                <Label Text="{Binding DragDescription}"
+                                   TextColor="#618574"/>
+                                    <progressBar:SfLinearProgressBar
+                                        Progress="{Binding DrunkDrag}"
+                                        ProgressColor="#618574"
+                                        WidthRequest="200"/>
+                                    <Label Text="{Binding Count}"
+                                           TextColor="#E3C13C"/>
+                                    <Label Text="{Binding StartDrink}"
+                                           TextColor="#618574"/>
+                                </StackLayout>
+                        </StackLayout>
+                    </Frame>
+                </border:SfBorder>
+
+            </StackLayout>
+        </ScrollView>
+            <buttons:SfButton
+                    Text="Добавить"
+                    VerticalOptions="End"
+                    BackgroundColor="#618574"
+                    TextColor="#96CEB4"
+                    Margin="40,300,40,0"
+                    HasShadow="True"
+                    Command="{Binding AddCurDrag}"
+                    CornerRadius="30"
+                    FontSize="20"
+                    Padding="15"
+                    ShadowColor="Gray"
+                    />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
