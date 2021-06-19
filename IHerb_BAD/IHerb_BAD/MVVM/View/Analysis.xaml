@@ -3,7 +3,8 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="IHerb_BAD.MVVM.View.Analysis"
              xmlns:pages="clr-namespace:IHerb_BAD.MVVM.View" 
-             xmlns:custom="clr-namespace:IHerb_BAD">
+             xmlns:custom="clr-namespace:IHerb_BAD"
+              NavigationPage.HasNavigationBar="False">
     <ScrollView Orientation="Vertical">
         <StackLayout Orientation="Vertical">
             <StackLayout Orientation="Horizontal">
