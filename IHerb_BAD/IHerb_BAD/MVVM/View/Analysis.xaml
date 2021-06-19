@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="IHerb_BAD.MVVM.View.Analysis"
+             xmlns:pages="clr-namespace:IHerb_BAD.MVVM.View" 
+             xmlns:custom="clr-namespace:IHerb_BAD">
+    <ScrollView Orientation="Vertical">
+        <StackLayout Orientation="Vertical">
+            <StackLayout Orientation="Horizontal">
+                <ImageButton 
+                            Source="back.png" 
+                            WidthRequest="40" 
+                            BorderColor="Transparent" 
+                            HorizontalOptions="Start"
+                            BackgroundColor="Transparent"
+                            Command="{Binding BackClick}"
+                            Margin="20"/>
+                <Label
+                            Text="{Binding AnalysType}"
+                            FontSize="20"
+                            WidthRequest="230"
+                            HorizontalTextAlignment="Center"                                                        
+                            TextColor="#618574"
+                            FontAttributes="Bold"
+                            FontFamily="Roboto"
+                        />
+                <ImageButton 
+                            Source="save.png" 
+                            WidthRequest="25"
+                            HeightRequest="25"
+                            BorderColor="Transparent" 
+                            HorizontalOptions="End"
+                            BackgroundColor="Transparent"
+                            Command="{Binding SaveClick}"
+                            Margin="20"/>
+                
+            </StackLayout>
+            <Frame
+                  BackgroundColor="#96CEB4"
+                  VerticalOptions="Fill"
+                  CornerRadius="30">
+                <StackLayout
+                    Orientation="Vertical">
+                    <ListView ItemsSource="{Binding AnalStats}">
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <StackLayout 
+                                Orientation="Horizontal"
+                                VerticalOptions="Start"
+                                HorizontalOptions="StartAndExpand"
+                                Padding="15,20"
+                                Spacing="10">
+                                    <Label
+                        Text="{Binding StatName}"
+                        HorizontalTextAlignment="Start"
+                        WidthRequest="200"
+                        HorizontalOptions="Start"
+                                    FontSize="18"
+                                    Margin="0,10"
+                        FontAttributes="Bold"
+                                    TextDecorations="None"
+                                    TextColor="#FFEEAD"/>
+                                    <custom:CustomEntry
+                        Text="{Binding StatData}"
+                        WidthRequest="150"   
+                        HorizontalOptions="End"
+                        CornerRadius="30"
+                        BorderColor="#FFEEAD"
+                        BorderWidth="5"
+                                    />
+                                </StackLayout>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+                </StackLayout>
+            </Frame>
+        </StackLayout>
+        
+    </ScrollView>
+</ContentPage>

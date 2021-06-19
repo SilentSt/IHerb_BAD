@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:custom="clr-namespace:IHerb_BAD" xmlns:combobox="clr-namespace:Syncfusion.XForms.ComboBox;assembly=Syncfusion.SfComboBox.XForms"
+             xmlns:sync="clr-namespace:Syncfusion.SfCalendar.XForms;assembly=Syncfusion.SfCalendar.XForms"
+             x:Class="IHerb_BAD.MVVM.View.Calendar"
+             NavigationPage.HasNavigationBar="False"
+             BackgroundColor="#CEA47D">
+    <ContentPage.Content>
+        <ScrollView Orientation="Vertical">
+            <StackLayout
+            >
+                <Frame CornerRadius="30"
+                       Margin="0,-50">
+                    <StackLayout Orientation="Vertical">
+                        <StackLayout Orientation="Horizontal"
+                         HorizontalOptions="FillAndExpand"
+                         Margin="0,65,0,0"
+                         >
+                            <ImageButton 
+                            Source="back.png" 
+                            WidthRequest="40" 
+                            BorderColor="Transparent" 
+                            HorizontalOptions="Start"
+                            BackgroundColor="Transparent"
+                            Command="{Binding BackClick}"
+                            Margin="10"/>
+                            <Label                    
+                            Text="Календарь"
+                            FontSize="30"
+                            Margin="0,5,0,0"
+                            WidthRequest="250"
+                            HorizontalTextAlignment="Center"
+                            TextColor="#CEA47D"
+                            FontAttributes="Bold"
+                            FontFamily="Roboto"
+                        />
+                        </StackLayout>
+                        <combobox:SfComboBox 
+                        HeightRequest="40" 
+                        Text="{Binding CalendarType}"
+                        x:Name="comboBox"
+                        Margin="40,0"                      
+                        BorderColor="Transparent"
+                        DropDownBackgroundColor="#96CEB4"
+                        DropDownBorderColor="#FFEEAD"
+                        DropDownCornerRadius="15"
+                        DropDownTextColor="#FFEEAD"
+                        DropDownTextSize="15"
+                        TextHighlightMode="MultipleOccurrence"
+                        SelectedDropDownItemColor="#618574"
+                        TextColor="#CEA47D"
+                        TextSize="20"
+                        >
+                        </combobox:SfComboBox>
+                        <sync:SfCalendar
+                HorizontalOptions="Center"
+                BackgroundColor="#FFF"
+                            SelectedDates="{Binding SelectedDates}"
+                >
+                        </sync:SfCalendar>
+                    </StackLayout>
+                </Frame>
+                <Button
+                        Text="Сохранить"
+                        TextTransform="None"
+                        FontSize="25"
+                        Margin="25,80"
+                        TextColor="#618574"
+                        BackgroundColor="#FFEEAD"
+                        CornerRadius="30"
+                        Command="{Binding Save}"
+                        />
+            </StackLayout>
+        </ScrollView>
+        
+    </ContentPage.Content>
+</ContentPage>

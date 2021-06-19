@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:custom="clr-namespace:IHerb_BAD"
+             xmlns:picker="clr-namespace:Syncfusion.SfPicker.XForms;assembly=Syncfusion.SfPicker.XForms"
+             xmlns:combobox="clr-namespace:Syncfusion.XForms.ComboBox;assembly=Syncfusion.SfComboBox.XForms"
+             xmlns:sync="clr-namespace:Syncfusion.XForms.Pickers;assembly=Syncfusion.SfPicker.XForms"
+             xmlns:ListCollection="clr-namespace:System.Collections.Generic;assembly=netstandard"
+             x:Class="IHerb_BAD.MVVM.View.AnalysiesManager">
+    <ContentPage.Content>
+        <StackLayout 
+            VerticalOptions="FillAndExpand"
+            Orientation="Vertical">
+            <StackLayout Orientation="Horizontal">
+                <ImageButton 
+                            Source="back.png" 
+                            WidthRequest="40" 
+                            BorderColor="Transparent" 
+                            HorizontalOptions="Start"
+                            BackgroundColor="Transparent"
+                            Command="{Binding BackClick}"
+                            Margin="20"/>
+                <Label
+                            Text=""
+                            FontSize="20"
+                            WidthRequest="230"
+                            HorizontalTextAlignment="Center"                                                        
+                            TextColor="#618574"
+                            FontAttributes="Bold"
+                            FontFamily="Roboto"
+                        />
+            </StackLayout>
+
+            <Frame
+                  BackgroundColor="#96CEB4"
+                  HeightRequest="600"
+                  CornerRadius="30"
+                  Margin="0,0,0,-50"
+                  >
+                <StackLayout Orientation="Vertical">
+                    <Label
+                        Text="Анализ"
+                        HorizontalTextAlignment="Center"
+                        TextColor="#FFEEAD"
+                        FontSize="25"/>
+                    <combobox:SfComboBox 
+                        HeightRequest="40" 
+                        Text="{Binding AnalisType}"
+                        x:Name="comboBox"
+                        BorderColor="Transparent"
+                        DropDownBackgroundColor="#96CEB4"
+                        DropDownBorderColor="#FFEEAD"
+                        DropDownCornerRadius="15"
+                        DropDownTextColor="#FFEEAD"
+                        DropDownTextSize="15"
+                        TextHighlightMode="MultipleOccurrence"
+                        SelectedDropDownItemColor="#618574"
+                        TextColor="#3EB574"
+                        TextSize="20"
+                        >
+                        <combobox:SfComboBox.ComboBoxSource>
+                            <ListCollection:List x:TypeArguments="x:String">
+                            </ListCollection:List>
+                        </combobox:SfComboBox.ComboBoxSource>
+                    </combobox:SfComboBox>
+                    <RelativeLayout>
+                        <Button
+                        CornerRadius="30"
+                        Padding="10"
+                        WidthRequest="369"
+                        IsEnabled="False"
+                        BorderWidth="4"
+                        BorderColor="#FFEEAD"
+                        Margin="0,15" 
+                        BackgroundColor="#96CEB4">
+                        </Button>
+                        <sync:SfDatePicker
+                            Date="{Binding SelectedDate}"
+                            HeaderHeight="0"                         
+                            HeightRequest="30"
+                            WidthRequest="350"
+                            Margin="10,24"
+                            ColumnHeaderHeight="0"
+                            Format="dd_MM_yyyy"
+                            UnselectedItemFontSize="20"
+                            SelectedItemFontSize="20"                                              
+                            BackgroundColor="#96CEB4"
+                            BorderColor="Transparent"                        
+                        >
+
+                        </sync:SfDatePicker>
+                    </RelativeLayout>
+                    <Button
+                        Text="Сохранить"
+                        TextTransform="None"
+                        FontSize="25"
+                        TextColor="#618574"
+                        BackgroundColor="#FFEEAD"
+                        CornerRadius="30"
+                        Command="{Binding Save}"
+                        Margin="0,60"/>
+                </StackLayout>
+            </Frame>
+
+        </StackLayout>
+        
+    </ContentPage.Content>
+</ContentPage>
