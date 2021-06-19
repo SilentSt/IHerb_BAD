@@ -12,7 +12,7 @@ namespace IHerb_BAD.MVVM.View
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class Profile : ContentPage
     {
-        public Profile()
+        public Profile( )
         {
             InitializeComponent();
             BindingContext = new ProfileViewModel() { Navigation = this.Navigation };

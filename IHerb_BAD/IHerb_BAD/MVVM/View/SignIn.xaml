@@ -24,7 +24,7 @@
             </StackLayout>
             <StackLayout Orientation="Horizontal">
                 <Label Text="Номер телефона" Margin="15,10,15,0"/>
-                <Entry HorizontalOptions="FillAndExpand">
+                <Entry HorizontalOptions="FillAndExpand" Keyboard="Telephone">
                     <Entry.Behaviors>
                         <behavior:MaskedBehavior Mask="X (XXX) XXX-XX-XX"/>
                     </Entry.Behaviors>

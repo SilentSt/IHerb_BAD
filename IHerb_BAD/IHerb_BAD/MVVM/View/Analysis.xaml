@@ -41,8 +41,8 @@
                   CornerRadius="30">
                 <StackLayout
                     Orientation="Vertical">
-                    <ListView ItemsSource="{Binding AnalStats}">
-                        <ListView.ItemTemplate>
+                    <StackLayout BindableLayout.ItemsSource="{Binding AnalStats}">
+                        <BindableLayout.ItemTemplate>
                             <DataTemplate>
                                 <StackLayout 
                                 Orientation="Horizontal"
@@ -61,7 +61,7 @@
                                     TextDecorations="None"
                                     TextColor="#FFEEAD"/>
                                     <custom:CustomEntry
-                        Text="{Binding StatData}"
+                        Text="{Binding StatValue}"
                         WidthRequest="150"   
                         HorizontalOptions="End"
                         CornerRadius="30"
@@ -70,8 +70,8 @@
                                     />
                                 </StackLayout>
                             </DataTemplate>
-                        </ListView.ItemTemplate>
-                    </ListView>
+                        </BindableLayout.ItemTemplate>
+                    </StackLayout>
                 </StackLayout>
             </Frame>
         </StackLayout>

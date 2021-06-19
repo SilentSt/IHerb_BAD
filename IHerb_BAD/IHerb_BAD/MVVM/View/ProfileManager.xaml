@@ -14,21 +14,38 @@
                 FontAttributes="Bold"
                 Margin="0,20"
                 TextColor="#FFEEAD"/>
-            <ListView ItemsSource="{Binding Users}">
-                <ListView.ItemTemplate>
+
+            <StackLayout BindableLayout.ItemsSource="{Binding Users}">
+                <BindableLayout.ItemTemplate>
                     <DataTemplate>
-                        <local:CircleImage                           
-                    Source="{Binding UserImage}"               
-                    Aspect="AspectFit"
-                    WidthRequest="130"
-                    HeightRequest="130"
-                    BorderColor="#FFEEAD"
-                    BorderThickness="2"/>
+                        <StackLayout Orientation="Vertical">
+                            <Label HorizontalOptions="Center" FontSize="18" TextColor="Bisque" Margin="0,0,0,-10" Text="{Binding Nick}"/>
+                            <RelativeLayout HorizontalOptions="Center">
+                                <Button HeightRequest="130" 
+                                        HorizontalOptions="Center" 
+                                        WidthRequest="130"
+                                        Text="{Binding Nick}"
+                                        Command="{Binding OpenProfile}"
+                                        CommandParameter="{Binding .}"
+                                        CornerRadius="65"/>
+                                <local:CircleImage
+                                    HorizontalOptions="Center"
+                            Source="{Binding UserImage}"
+                            Aspect="AspectFit"
+                            WidthRequest="130"
+                            HeightRequest="130"
+                            InputTransparent="True"
+                            BorderColor="#FFEEAD"
+                            BorderThickness="2"/>
+                                
+                            </RelativeLayout>
+                        </StackLayout>
                     </DataTemplate>
-                </ListView.ItemTemplate>
-            </ListView>
+                </BindableLayout.ItemTemplate>
+            </StackLayout>
             <Button
                 Margin="0,45"
+                Padding="0,-41,0,0"
                 HorizontalOptions="CenterAndExpand"
                 CornerRadius="65"
                 FontSize="150"
