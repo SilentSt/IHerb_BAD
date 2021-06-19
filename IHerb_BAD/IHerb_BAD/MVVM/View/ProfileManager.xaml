@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:local="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin"
+             xmlns:local="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin" xmlns:buttons="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms"
              x:Class="IHerb_BAD.MVVM.View.ProfileManager"
              BackgroundColor="#CEA47D"
              NavigationPage.HasNavigationBar="False">
@@ -20,25 +20,20 @@
                     <DataTemplate>
                         <StackLayout Orientation="Vertical">
                             <Label HorizontalOptions="Center" FontSize="18" TextColor="Bisque" Margin="0,0,0,-10" Text="{Binding Nick}"/>
-                            <RelativeLayout HorizontalOptions="Center">
-                                <Button HeightRequest="130" 
-                                        HorizontalOptions="Center" 
-                                        WidthRequest="130"
-                                        Text="{Binding Nick}"
-                                        Command="{Binding OpenProfile}"
-                                        CommandParameter="{Binding .}"
-                                        CornerRadius="65"/>
-                                <local:CircleImage
-                                    HorizontalOptions="Center"
-                            Source="{Binding UserImage}"
-                            Aspect="AspectFit"
-                            WidthRequest="130"
-                            HeightRequest="130"
-                            InputTransparent="True"
-                            BorderColor="#FFEEAD"
-                            BorderThickness="2"/>
-                                
-                            </RelativeLayout>
+                            <buttons:SfButton HorizontalOptions="Center"
+                                              BackgroundImage="{Binding UserImage}"
+                                              ImageWidth="90"                        
+                                              ImageAlignment="Start"
+                                              WidthRequest="95"
+                                              HeightRequest="95"
+                                              BorderColor="#FFEEAD"
+                                              BorderThickness="1"
+                                              ShowIcon="True"
+                                              BackgroundColor="Transparent"
+                                              Command="{Binding OpenProfile}"
+                                              CommandParameter="{Binding .}"
+                                              CornerRadius="65">
+                            </buttons:SfButton>
                         </StackLayout>
                     </DataTemplate>
                 </BindableLayout.ItemTemplate>

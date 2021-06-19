@@ -17,7 +17,7 @@
                     Margin="17.5, 17.5,17.5, 20">
                     <StackLayout Orientation="Horizontal">
                         <ImageButton 
-                            Source="back.png" 
+                            Source="LeftArrowDark.png" 
                             WidthRequest="40" 
                             BorderColor="Transparent"
                             HorizontalOptions="Start"
@@ -40,14 +40,20 @@
                     </StackLayout>
                     
 
-                    <local:CircleImage
-                    Source="unnamed.jpg"
-                    Aspect="AspectFit"
-                    WidthRequest="100"
-                    HeightRequest="100"
-                    BorderColor="#96CEB4"
-                    BorderThickness="1">
-                    </local:CircleImage>
+                    <buttons:SfButton
+                        HorizontalOptions="Center"
+                        BackgroundImage="unnamed.png"
+                        ImageWidth="90"                        
+                        ImageAlignment="Start"
+                        WidthRequest="95"
+                        HeightRequest="95"
+                        BorderColor="#96CEB4"
+                        BorderThickness="1"
+                        ShowIcon="True"
+                        BackgroundColor="Transparent"
+                        Command="{Binding ChangeAvatar}"
+                    CornerRadius="65">
+                    </buttons:SfButton>
                     <StackLayout
                     Orientation="Horizontal"
                     Margin="0,0,0,0"
