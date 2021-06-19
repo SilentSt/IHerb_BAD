@@ -2,162 +2,214 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin"
-             xmlns:entry="clr-namespace:Xamarin.Forms.Xaml.Internals;assembly=Xamarin.Forms.Xaml"
-             x:Class="IHerb_BAD.MVVM.View.Profile">
+             xmlns:entry="clr-namespace:EntryCustomReturn.Forms.Plugin.Abstractions;assembly=EntryCustomReturn.Forms.Plugin.Abstractions"
+             xmlns:custom="clr-namespace:IHerb_BAD"
+             x:Class="IHerb_BAD.MVVM.View.Profile"
+             NavigationPage.HasNavigationBar="False"
+             BackgroundColor="#FFF">
     <ContentPage.Content>
         <ScrollView Orientation="Vertical">
-            <StackLayout
-                Margin="17.5, 17.5,17.5, 20">
-                <Label 
-                    Text="{Binding Username}"
-                    TextColor="#000"
-                    FontSize="12"
-                    FontFamily="Roboto"/>
+            <StackLayout>
+                <StackLayout
+                    Margin="17.5, 17.5,17.5, 20">
+                    <StackLayout Orientation="Horizontal">
+                        <ImageButton 
+                            Source="back.png" 
+                            WidthRequest="40" 
+                            BorderColor="Transparent" 
+                            HorizontalOptions="Start"
+                            BackgroundColor="Transparent"
+                            Command="{Binding BackClick}"
+                            Margin="10"/>
+                        <custom:CustomEntry
+                            Text="{Binding Username}"
+                            Placeholder="Имя пользователя"
+                            FontSize="20"
+                            BorderWidth="0"
+                            BorderColor="Transparent"
+                            HorizontalTextAlignment="Center"
+                            PlaceholderColor="#618574"
+                            TextColor="#618574"
+                            FontAttributes="Bold"
+                            FontFamily="Roboto"
+                        />
+                    </StackLayout>
+                    
 
-                <local:CircleImage
+                    <local:CircleImage
                     Source="unnamed.jpg"
                     Aspect="AspectFit"
                     WidthRequest="100"
                     HeightRequest="100"
-                    BorderColor="#000"
+                    BorderColor="#96CEB4"
                     BorderThickness="1">
-                </local:CircleImage>
-                <StackLayout 
-                    Orientation="Horizontal"
-                    Margin="0,15,0,0">
-                    <Entry
-                        Text="{Binding Name}"
-                        HorizontalTextAlignment="Center"
-                        Placeholder="Имя"
-                        FontSize="16"
-                        TextColor="#000"
-                        HorizontalOptions="FillAndExpand"/>
-                </StackLayout>
-                <StackLayout
+                    </local:CircleImage>
+                    <StackLayout
                     Orientation="Horizontal"
                     Margin="0,0,0,0"
-                    HorizontalOptions="Center">
-                    <RadioButton 
-                        Content="муж"
+                    HorizontalOptions="CenterAndExpand">
+                        <Label 
+                            Text="Пол"
+                            Margin="0,5"
+                            TextColor="#618574"
+                            FontSize="18"/>
+                        <RadioButton 
+                        Content="М"
+                        TextColor="#96CEB4"
                         Margin="0,0,10,0"
                         />
-                    <RadioButton
-                        Content="жен"
+                        <RadioButton
+                        Content="Ж"
+                        TextColor="#96CEB4"
                         />
-                </StackLayout>
-                <StackLayout
+                    </StackLayout>
+                    <StackLayout
                     Orientation="Horizontal"
                     HorizontalOptions="Center"
                     Margin="0,10,0,0">
-                    <Label 
+                        <Label 
                         Text="Дата рождения"
-                        TextColor="#000"
+
+                        TextColor="#618574"
                         FontSize="16"
                         Margin="0,15,0,0">
-                    </Label>
-                    <DatePicker
+                        </Label>
+                        <DatePicker
                         Date="{Binding BirthDate}"
-                        HorizontalOptions="Center"
+                        HorizontalOptions="CenterAndExpand"
                         MinimumDate="1/1/1900"
+                        TextColor="#96CEB4"
                         Format="d/MM/yy"
                         />
-                </StackLayout>
-                <StackLayout
-                    Orientation="Horizontal"
-                    HorizontalOptions="Center"
-                    Margin="0,10">
-                    <Frame
-                        BorderColor="#000"
-                        Margin="10,0"
-                        Padding="0,0"
-                        WidthRequest="130">
-                        <Entry
-                            Text="{Binding Height}"
-                            BackgroundColor="Transparent"
-                            Placeholder="рост(см)"
-                            HorizontalTextAlignment="Center"                            
-                            >
-                        </Entry>
-                    </Frame>
-                    <Frame
-                        BorderColor="#000"
-                        Margin="10,0"
-                        Padding="0,0"
-                        WidthRequest="130">
-                        <Entry
-                            Text="{Binding Height}"
-                            BackgroundColor="Transparent"
-                            Placeholder="вес(кг)"
-                            HorizontalTextAlignment="Center"                            
-                            >
-                        </Entry>
-                    </Frame>
-                </StackLayout>
-                <StackLayout
+                    </StackLayout>
+                    <StackLayout
                     Orientation="Horizontal"
                     HorizontalOptions="Center">
-                    <Frame
-                        BorderColor="#000"
-                        Margin="10,0"
-                        Padding="0,0"
-                        WidthRequest="130">
-                        <Entry
+                        <custom:CustomEntry
                             Text="{Binding Height}"
-                            BackgroundColor="Transparent"
+                            Placeholder="рост(см)"
+                            BorderColor="#96CEB4"
+                            BorderWidth="10"
+                            WidthRequest="150"
+                            PlaceholderColor="#618574"
+                            TextColor="#618574"
+                            BackgroundColor="#FFF"
+                            CornerRadius="30"
+                            HorizontalTextAlignment="Center"                            
+                            />
+                        <custom:CustomEntry
+                            Text="{Binding Weight}"
+                            Placeholder="вес(кг)"
+                            BorderColor="#96CEB4"
+                            BorderWidth="10"
+                            WidthRequest="150"
+                            PlaceholderColor="#618574"
+                            TextColor="#618574"
+                            CornerRadius="30"
+                            BackgroundColor="#FFF"
+                            HorizontalTextAlignment="Center"                            
+                            />
+                    </StackLayout>
+                    <StackLayout
+                    Orientation="Horizontal"
+                    HorizontalOptions="Center">
+                        <custom:CustomEntry
+                            Text="{Binding Davlenie}"
                             Placeholder="давление"
+                            BorderColor="#96CEB4"
+                            BorderWidth="10"
+                            WidthRequest="150"
+                            CornerRadius="30"
+                            PlaceholderColor="#618574"
+                            TextColor="#618574"
+                            BackgroundColor="#FFF"
                             HorizontalTextAlignment="Center"                            
-                            >
-                        </Entry>
-                    </Frame>
-                    <Frame
-                        BorderColor="#000"
-                        Margin="10,0"
-                        Padding="0,0"
-                        WidthRequest="130">
-                        <Entry
-                            Text="{Binding Height}"
-                            BackgroundColor="Transparent"
+                            />
+                        <custom:CustomEntry
+                            Text="{Binding Puls}"
                             Placeholder="пульс(уд/мин)"
+                            BorderColor="#96CEB4"
+                            BorderWidth="10"
+                            WidthRequest="150"
+                            CornerRadius="30"
+                            PlaceholderColor="#618574"
+                            TextColor="#618574"
+                            BackgroundColor="#FFF"
                             HorizontalTextAlignment="Center"                            
-                            >
-                        </Entry>
-                    </Frame>
+                            />
+                    </StackLayout>
+
                 </StackLayout>
                 <Frame
-                    Margin="0,15"
-                    Padding="0,0"
-                    BorderColor="#000"
+                    Padding="0"
+                    CornerRadius="30"
+                    Margin="0,0,0,-100">
+                    
+                
+                <StackLayout
+                    Margin="0,0"
+                    BackgroundColor="#96CEB4"
+                    Padding="25,30"
                     >
-                    <Picker 
-                    Title="Хронические заболевания"
-                    BackgroundColor="Transparent"
-                    TitleColor="#000"
-                    HorizontalTextAlignment="Center"
-                        ItemsSource="{Binding HronicIllList}">
-                    </Picker>
+                        <Label 
+                            Text="Хронические заболевания"
+                            TextColor="#FFEEAD"
+                            FontSize="20"
+                            HorizontalTextAlignment="Center"/>
+
+                        <Button
+                            Text="{Binding HronicIll}"
+                            CornerRadius="30"
+                            Margin="10,0"
+                            BackgroundColor="#96CEB4"
+                            BorderColor="#FFEEAD"
+                            BorderWidth="3"/>
+                        <Label 
+                            Text="Аллергия/ непереносимость веществ"
+                            TextColor="#FFEEAD"
+                            FontSize="20"
+                            HorizontalTextAlignment="Center"/>
+                        <Button
+                            Text="{Binding HronicIll}"
+                            CornerRadius="30"
+                            Margin="10,0"
+                            BackgroundColor="#96CEB4"
+                            BorderColor="#FFEEAD"
+                            BorderWidth="3"/>
+                        <Label 
+                            Text="Принимаемые препараты"
+                            TextColor="#FFEEAD"
+                            FontSize="20"
+                            HorizontalTextAlignment="Center"/>
+                        <Button
+                            Text="{Binding HronicIll}"
+                            CornerRadius="30"
+                            Margin="10,0"
+                            BackgroundColor="#96CEB4"
+                            BorderColor="#FFEEAD"
+                            BorderWidth="3"/>
+                        <Button
+                            Text="Анализы"
+                            FontSize="20"
+                            BackgroundColor="#FFEEAD"
+                            CornerRadius="30"
+                            Margin="30,0"
+                            TextColor="#618574"
+                            TextTransform="None"
+                            />
+                        <Button
+                            Text="Сохранить"
+                            FontSize="20"
+                            FontAttributes="Bold"
+                            BackgroundColor="#FFEEAD"
+                            CornerRadius="30"
+                            Margin="30,0"
+                            TextColor="#618574"
+                            TextTransform="None"
+                            />
+                        <Button Margin="20,10,0,20"/>
+                    </StackLayout>
                 </Frame>
-                <Frame
-                    Margin="0,15"
-                    Padding="0,0"
-                    BorderColor="#000"
-                    >
-                    <Picker 
-                    Title="Аллергия/непереносимость компонентов"
-                    BackgroundColor="Transparent"
-                    TitleColor="#000"
-                    HorizontalTextAlignment="Center"
-                        ItemsSource="{Binding HronicIllList}">
-                    </Picker>
-                </Frame>
-                <Button 
-                    Text="Анализы"
-                    Command="{Binding AnalysisClicked}"
-                    BackgroundColor="#C4C4C4"/>
-                <Button 
-                    Text="Витамины принимаемые сейчас"
-                    Command="{Binding VitaminesClicked}"
-                    BackgroundColor="#C4C4C4"
-                    Margin="0,25"/>
             </StackLayout>
         </ScrollView>
     </ContentPage.Content>
