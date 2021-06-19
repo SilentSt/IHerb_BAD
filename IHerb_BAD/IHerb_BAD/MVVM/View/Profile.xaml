@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin"
              xmlns:entry="clr-namespace:EntryCustomReturn.Forms.Plugin.Abstractions;assembly=EntryCustomReturn.Forms.Plugin.Abstractions"
-             xmlns:custom="clr-namespace:IHerb_BAD"
+             xmlns:custom="clr-namespace:IHerb_BAD" xmlns:sync="clr-namespace:Syncfusion.XForms.Pickers;assembly=Syncfusion.SfPicker.XForms" xmlns:combobox="clr-namespace:Syncfusion.XForms.ComboBox;assembly=Syncfusion.SfComboBox.XForms"
              x:Class="IHerb_BAD.MVVM.View.Profile"
              NavigationPage.HasNavigationBar="False"
              BackgroundColor="#FFF">
@@ -64,23 +64,45 @@
                         />
                     </StackLayout>
                     <StackLayout
-                    Orientation="Horizontal"
-                    HorizontalOptions="Center"
+                    Orientation="Vertical"
+                    HorizontalOptions="CenterAndExpand"
                     Margin="0,10,0,0">
                         <Label 
                         Text="Дата рождения"
-
+                        HorizontalTextAlignment="Center"
                         TextColor="#618574"
                         FontSize="16"
                         Margin="0,15,0,0">
                         </Label>
-                        <DatePicker
-                        Date="{Binding BirthDate}"
-                        HorizontalOptions="CenterAndExpand"
-                        MinimumDate="1/1/1900"
-                        TextColor="#96CEB4"
-                        Format="d/MM/yy"
-                        />
+                        <RelativeLayout
+                            >
+                            <Button
+                        CornerRadius="30"
+                        Padding="10"
+                        WidthRequest="369"
+                        IsEnabled="False"
+                        BorderWidth="4"
+                        BorderColor="#96CEB4"
+                        Margin="0,15" 
+                        BackgroundColor="#FFF">
+                            </Button>
+                            <sync:SfDatePicker
+                            Date="{Binding SelectedDate}"
+                            HeaderHeight="0"                         
+                            HeightRequest="30"
+                            WidthRequest="310"
+                                
+                            Margin="10,24"
+                            ColumnHeaderHeight="0"
+                            Format="dd_MM_yyyy"
+                            UnselectedItemFontSize="20"
+                            SelectedItemFontSize="20"                                              
+                            BackgroundColor="#FFF"
+                            BorderColor="Transparent"                        
+                        >
+
+                            </sync:SfDatePicker>
+                        </RelativeLayout>
                     </StackLayout>
                     <StackLayout
                     Orientation="Horizontal"
@@ -156,38 +178,99 @@
                             TextColor="#FFEEAD"
                             FontSize="20"
                             HorizontalTextAlignment="Center"/>
-
-                        <Button
-                            Text="{Binding HronicIll}"
-                            CornerRadius="30"
-                            Margin="10,0"
-                            BackgroundColor="#96CEB4"
-                            BorderColor="#FFEEAD"
-                            BorderWidth="3"/>
+                        <RelativeLayout>
+                            <Button
+                                IsEnabled="False"
+                                CornerRadius="30"
+                                Margin="8,0,0,0"
+                                HeightRequest="50"
+                                WidthRequest="350"
+                                BackgroundColor="#96CEB4"
+                                BorderColor="#FFEEAD"
+                                BorderWidth="3"/>
+                            <combobox:SfComboBox 
+                        HeightRequest="40" 
+                        Text="{Binding HronicIll}"
+                        x:Name="comboBox"
+                        Margin="40,0"                      
+                        BorderColor="Transparent"
+                        DropDownBackgroundColor="#FFF"
+                        DropDownBorderColor="#FFEEAD"
+                        DropDownCornerRadius="15"
+                        DropDownTextColor="#FFEEAD"
+                        DropDownTextSize="15"
+                        TextHighlightMode="MultipleOccurrence"
+                        SelectedDropDownItemColor="#FFEEAD"
+                        TextColor="#CEA47D"
+                        TextSize="20"
+                        >
+                            </combobox:SfComboBox>
+                        </RelativeLayout>
+                       
                         <Label 
                             Text="Аллергия/ непереносимость веществ"
                             TextColor="#FFEEAD"
                             FontSize="20"
                             HorizontalTextAlignment="Center"/>
-                        <Button
-                            Text="{Binding HronicIll}"
-                            CornerRadius="30"
-                            Margin="10,0"
-                            BackgroundColor="#96CEB4"
-                            BorderColor="#FFEEAD"
-                            BorderWidth="3"/>
+                        <RelativeLayout>
+                            <Button
+                                IsEnabled="False"
+                                CornerRadius="30"
+                                Margin="8,0,0,0"
+                                HeightRequest="50"
+                                WidthRequest="350"
+                                BackgroundColor="#96CEB4"
+                                BorderColor="#FFEEAD"
+                                BorderWidth="3"/>
+                            <combobox:SfComboBox 
+                        HeightRequest="40" 
+                        Text="{Binding Alergy}"
+                        Margin="40,0"                      
+                        BorderColor="Transparent"
+                        DropDownBackgroundColor="#FFF"
+                        DropDownBorderColor="#FFEEAD"
+                        DropDownCornerRadius="15"
+                        DropDownTextColor="#FFEEAD"
+                        DropDownTextSize="15"
+                        TextHighlightMode="MultipleOccurrence"
+                        SelectedDropDownItemColor="#FFEEAD"
+                        TextColor="#CEA47D"
+                        TextSize="20"
+                        >
+                            </combobox:SfComboBox>
+                        </RelativeLayout>
                         <Label 
                             Text="Принимаемые препараты"
                             TextColor="#FFEEAD"
                             FontSize="20"
                             HorizontalTextAlignment="Center"/>
-                        <Button
-                            Text="{Binding HronicIll}"
-                            CornerRadius="30"
-                            Margin="10,0"
-                            BackgroundColor="#96CEB4"
-                            BorderColor="#FFEEAD"
-                            BorderWidth="3"/>
+                        <RelativeLayout>
+                            <Button
+                                IsEnabled="False"
+                                CornerRadius="30"
+                                Margin="8,0,0,0"
+                                HeightRequest="50"
+                                WidthRequest="350"
+                                BackgroundColor="#96CEB4"
+                                BorderColor="#FFEEAD"
+                                BorderWidth="3"/>
+                            <combobox:SfComboBox 
+                        HeightRequest="40" 
+                        Text="{Binding DragsUsed}"
+                        Margin="40,0"                      
+                        BorderColor="Transparent"
+                        DropDownBackgroundColor="#FFF"
+                        DropDownBorderColor="#FFEEAD"
+                        DropDownCornerRadius="15"
+                        DropDownTextColor="#FFEEAD"
+                        DropDownTextSize="15"
+                        TextHighlightMode="MultipleOccurrence"
+                        SelectedDropDownItemColor="#FFEEAD"
+                        TextColor="#CEA47D"
+                        TextSize="20"
+                        >
+                            </combobox:SfComboBox>
+                        </RelativeLayout>
                         <Button
                             Text="Анализы"
                             FontSize="20"
