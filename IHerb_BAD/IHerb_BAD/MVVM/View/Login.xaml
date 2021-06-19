@@ -6,21 +6,51 @@
     <ContentPage.Content>
         <StackLayout BackgroundColor="#ffeead">
             <StackLayout Orientation="Horizontal">
-            <ImageButton Source="back.png" WidthRequest="40" BorderColor="Transparent" HorizontalOptions="Start" BackgroundColor="Transparent" Command="{Binding BackClick}" Margin="10"/>
-                <Label Text="Авторизация" FontSize="29" FontAttributes="Bold" TextColor="#618574" Margin="20"/>
+            <ImageButton Source="back.png" 
+                         WidthRequest="40" 
+                         BorderColor="Transparent" 
+                         HorizontalOptions="Start" 
+                         BackgroundColor="Transparent" 
+                         Command="{Binding BackClick}" 
+                         Margin="10"/>
+                <Label Text="Авторизация" 
+                       FontSize="29" 
+                       FontAttributes="Bold" 
+                       TextColor="#618574" 
+                       Margin="20"/>
             </StackLayout>
-            <Frame Margin="30" Padding="30" BackgroundColor="#ffeead">
-                <Label Text="Введите E-mail и пароль, чтобы войти в аккаунт" FontSize="22" TextColor="#618574"/>
+            <Frame Margin="30" 
+                   Padding="30" 
+                   BackgroundColor="#ffeead">
+                <Label Text="Введите E-mail и пароль, чтобы войти в аккаунт" 
+                       FontSize="22" 
+                       TextColor="#618574"/>
             </Frame>
-            <StackLayout Orientation="Horizontal" Margin="10">
-                <Image Source="mail.png" WidthRequest="40"/>
-                <Entry Text="{Binding Login}" HorizontalOptions="FillAndExpand" TextColor="DarkSlateGray"/>
+            <StackLayout Orientation="Horizontal" 
+                         Margin="10">
+                <Image Source="mail.png" 
+                       WidthRequest="40"/>
+                <Entry Text="{Binding Login}"
+                           Margin="4"
+                           HorizontalOptions="FillAndExpand" 
+                           TextColor="DarkSlateGray"/>
             </StackLayout>
-            <StackLayout Orientation="Horizontal" Margin="10">
-                <Image Source="lock.png" WidthRequest="40"/>
-                <Entry IsPassword="True" Text="{Binding Password}" HorizontalOptions="FillAndExpand" TextColor="DarkSlateGray"/>
+            <StackLayout Orientation="Horizontal" 
+                         Margin="10">
+                <Image Source="lock.png" 
+                       WidthRequest="40"/>
+                <Entry IsPassword="True" 
+                       Text="{Binding Password}" 
+                       HorizontalOptions="FillAndExpand" 
+                       TextColor="DarkSlateGray"/>
             </StackLayout>
-            <Button Margin="35" CornerRadius="20" HeightRequest="50" Text="Войти" BackgroundColor="#CEA47D" TextColor="#618574"/>
+            <Button Margin="35" 
+                    CornerRadius="20" 
+                    HeightRequest="50" 
+                    Text="Войти"
+                    Command="{Binding LoginClick}"
+                    BackgroundColor="#CEA47D" 
+                    TextColor="#618574"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
