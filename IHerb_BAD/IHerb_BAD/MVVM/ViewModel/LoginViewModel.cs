@@ -43,7 +43,7 @@ namespace IHerb_BAD.MVVM.ViewModel
         public ICommand BackClick { get; set; }
         public LoginViewModel()
         {
-            BackClick = new Command(Back);
+            BackClick = new Command(()=>Navigation.PopAsync());
             LoginClick = new Command(Authorize);
         }
 
@@ -51,13 +51,10 @@ namespace IHerb_BAD.MVVM.ViewModel
         {
             if (Login == "admin" && Password == "admin")
             {
+                Data.UserProfile = new UserProfile(){username = "admin"};
                 Navigation.PushAsync(new ProfileManager());
             }
         }
-
-        public void Back()
-        {
-            Navigation.PopAsync();
-        }
+        
     }
 }

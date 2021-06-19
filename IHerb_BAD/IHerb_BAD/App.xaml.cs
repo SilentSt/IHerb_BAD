@@ -11,7 +11,7 @@ namespace IHerb_BAD
         {
             Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("NDYxMjQ5QDMxMzkyZTMxMmUzMFhnOFJPelczRnpveUw5aFdXT3lheE42NGIyMmo2cGZpTVBJTDBzWHdEKzg9");
             InitializeComponent();
-            MainPage = new NavigationPage(new MVVM.View.Menu());
+            MainPage = new NavigationPage(new Start());
         }
 
         protected override void OnStart()

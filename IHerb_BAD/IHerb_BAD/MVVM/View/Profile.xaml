@@ -16,7 +16,7 @@
                         <ImageButton 
                             Source="back.png" 
                             WidthRequest="40" 
-                            BorderColor="Transparent" 
+                            BorderColor="Transparent"
                             HorizontalOptions="Start"
                             BackgroundColor="Transparent"
                             Command="{Binding BackClick}"
@@ -279,6 +279,7 @@
                             Margin="30,0"
                             TextColor="#618574"
                             TextTransform="None"
+                            Command="{Binding GoToAnals}"
                             />
                         <Button
                             Text="Сохранить"
@@ -286,6 +287,7 @@
                             FontAttributes="Bold"
                             BackgroundColor="#FFEEAD"
                             CornerRadius="30"
+                            Command="{Binding SaveClick}"
                             Margin="30,0"
                             TextColor="#618574"
                             TextTransform="None"
