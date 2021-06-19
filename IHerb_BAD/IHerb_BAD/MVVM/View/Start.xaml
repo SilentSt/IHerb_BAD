@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:buttons="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms"
              x:Class="IHerb_BAD.MVVM.View.Start"
              NavigationPage.HasNavigationBar="False">
     <ContentPage.Content>
@@ -11,23 +12,26 @@
                    CornerRadius="35" 
                    BackgroundColor="#ffeead">
                 <StackLayout Orientation="Vertical">
-                    <Button Text="Вход" 
+                    <buttons:SfButton Text="Вход" 
                             CornerRadius="25" 
                             BackgroundColor="#E3C13C" 
                             TextColor="White"
                             Command="{Binding Login}"
-                            Margin="20,10,20,0"/>
-                    <Button Text="Регистрация" 
+                            Margin="20,10,20,0"
+                                      HasShadow="True"/>
+                    <buttons:SfButton Text="Регистрация" 
                             TextColor="White"
                             Command="{Binding SignIn}"
                             CornerRadius="25" 
                             BackgroundColor="#CEA47D"
-                            Margin="20,10,20,0"/>
-                    <Button Text="Вход с I-Herb"
+                            Margin="20,10,20,0"
+                            HasShadow="True"/>
+                    <buttons:SfButton Text="Вход с I-Herb"
                             TextColor="White"
                             BackgroundColor="#CEA47D"
                             CornerRadius="20"
-                            Margin="20,10,20,0"/>
+                            Margin="20,10,20,0"
+                                      HasShadow="True"/>
                 </StackLayout>
             </Frame>
 

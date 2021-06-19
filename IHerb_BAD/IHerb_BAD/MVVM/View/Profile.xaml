@@ -3,7 +3,10 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin"
              xmlns:entry="clr-namespace:EntryCustomReturn.Forms.Plugin.Abstractions;assembly=EntryCustomReturn.Forms.Plugin.Abstractions"
-             xmlns:custom="clr-namespace:IHerb_BAD" xmlns:sync="clr-namespace:Syncfusion.XForms.Pickers;assembly=Syncfusion.SfPicker.XForms" xmlns:combobox="clr-namespace:Syncfusion.XForms.ComboBox;assembly=Syncfusion.SfComboBox.XForms"
+             xmlns:buttons="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms"
+             xmlns:custom="clr-namespace:IHerb_BAD"
+             xmlns:sync="clr-namespace:Syncfusion.XForms.Pickers;assembly=Syncfusion.SfPicker.XForms"
+             xmlns:combobox="clr-namespace:Syncfusion.XForms.ComboBox;assembly=Syncfusion.SfComboBox.XForms"
              x:Class="IHerb_BAD.MVVM.View.Profile"
              NavigationPage.HasNavigationBar="False"
              BackgroundColor="#FFF">
@@ -14,7 +17,7 @@
                     Margin="17.5, 17.5,17.5, 20">
                     <StackLayout Orientation="Horizontal">
                         <ImageButton 
-                            Source="back.png" 
+                            Source="LeftArrowDark.png" 
                             WidthRequest="40" 
                             BorderColor="Transparent"
                             HorizontalOptions="Start"
@@ -24,6 +27,7 @@
                         <custom:CustomEntry
                             Text="{Binding Username}"
                             Placeholder="Имя пользователя"
+                            Keyboard="Text"
                             FontSize="20"
                             BorderWidth="0"
                             BorderColor="Transparent"
@@ -36,14 +40,20 @@
                     </StackLayout>
                     
 
-                    <local:CircleImage
-                    Source="unnamed.jpg"
-                    Aspect="AspectFit"
-                    WidthRequest="100"
-                    HeightRequest="100"
-                    BorderColor="#96CEB4"
-                    BorderThickness="1">
-                    </local:CircleImage>
+                    <buttons:SfButton
+                        HorizontalOptions="Center"
+                        BackgroundImage="unnamed.png"
+                        ImageWidth="90"                        
+                        ImageAlignment="Start"
+                        WidthRequest="95"
+                        HeightRequest="95"
+                        BorderColor="#96CEB4"
+                        BorderThickness="1"
+                        ShowIcon="True"
+                        BackgroundColor="Transparent"
+                        Command="{Binding ChangeAvatar}"
+                    CornerRadius="65">
+                    </buttons:SfButton>
                     <StackLayout
                     Orientation="Horizontal"
                     Margin="0,0,0,0"
@@ -110,6 +120,7 @@
                         <custom:CustomEntry
                             Text="{Binding Height}"
                             Placeholder="рост(см)"
+                            Keyboard="Numeric"
                             BorderColor="#96CEB4"
                             BorderWidth="10"
                             WidthRequest="150"
@@ -124,6 +135,7 @@
                             Placeholder="вес(кг)"
                             BorderColor="#96CEB4"
                             BorderWidth="10"
+                            Keyboard="Numeric"
                             WidthRequest="150"
                             PlaceholderColor="#618574"
                             TextColor="#618574"
@@ -138,6 +150,7 @@
                         <custom:CustomEntry
                             Text="{Binding Davlenie}"
                             Placeholder="давление"
+                            Keyboard="Numeric"
                             BorderColor="#96CEB4"
                             BorderWidth="10"
                             WidthRequest="150"
@@ -150,6 +163,7 @@
                         <custom:CustomEntry
                             Text="{Binding Puls}"
                             Placeholder="пульс(уд/мин)"
+                            Keyboard="Numeric"
                             BorderColor="#96CEB4"
                             BorderWidth="10"
                             WidthRequest="150"
@@ -199,6 +213,7 @@
                         DropDownCornerRadius="15"
                         DropDownTextColor="#FFEEAD"
                         DropDownTextSize="15"
+                         MultiSelectMode="Delimiter"                                
                         TextHighlightMode="MultipleOccurrence"
                         SelectedDropDownItemColor="#FFEEAD"
                         TextColor="#CEA47D"
@@ -227,6 +242,7 @@
                         Text="{Binding Alergy}"
                         Margin="40,0"                      
                         BorderColor="Transparent"
+                                MultiSelectMode="Delimiter"
                         DropDownBackgroundColor="#FFF"
                         DropDownBorderColor="#FFEEAD"
                         DropDownCornerRadius="15"
@@ -259,6 +275,7 @@
                         Text="{Binding DragsUsed}"
                         Margin="40,0"                      
                         BorderColor="Transparent"
+                                MultiSelectMode="Delimiter"
                         DropDownBackgroundColor="#FFF"
                         DropDownBorderColor="#FFEEAD"
                         DropDownCornerRadius="15"
@@ -271,26 +288,26 @@
                         >
                             </combobox:SfComboBox>
                         </RelativeLayout>
-                        <Button
+                        <buttons:SfButton
                             Text="Анализы"
                             FontSize="20"
                             BackgroundColor="#FFEEAD"
                             CornerRadius="30"
                             Margin="30,0"
                             TextColor="#618574"
-                            TextTransform="None"
+                            HasShadow="True"
                             Command="{Binding GoToAnals}"
                             />
-                        <Button
+                        <buttons:SfButton
                             Text="Сохранить"
                             FontSize="20"
                             FontAttributes="Bold"
                             BackgroundColor="#FFEEAD"
                             CornerRadius="30"
+                            HasShadow="True"
                             Command="{Binding SaveClick}"
                             Margin="30,0"
                             TextColor="#618574"
-                            TextTransform="None"
                             />
                         <Button Margin="20,10,0,20"/>
                     </StackLayout>

@@ -1,8 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:custom="clr-namespace:IHerb_BAD" xmlns:combobox="clr-namespace:Syncfusion.XForms.ComboBox;assembly=Syncfusion.SfComboBox.XForms"
-             xmlns:sync="clr-namespace:Syncfusion.SfCalendar.XForms;assembly=Syncfusion.SfCalendar.XForms"
+             xmlns:custom="clr-namespace:IHerb_BAD"
+             xmlns:combobox="clr-namespace:Syncfusion.XForms.ComboBox;assembly=Syncfusion.SfComboBox.XForms"
+             xmlns:sync="clr-namespace:Syncfusion.SfCalendar.XForms;assembly=Syncfusion.SfCalendar.XForms" xmlns:buttons="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms"
              x:Class="IHerb_BAD.MVVM.View.Statement"
              NavigationPage.HasNavigationBar="False"
              BackgroundColor="#FFF">
@@ -81,9 +82,9 @@
                                     HorizontalTextAlignment="Center"/>
                             </StackLayout>
                         </StackLayout>
-                        <Button
+                        <buttons:SfButton
                         Text="К рекомендациям"
-                        TextTransform="None"
+                        HasShadow="True"
                         FontSize="25"
                         Margin="25,80,25,15"
                         TextColor="#FFEEAD"
