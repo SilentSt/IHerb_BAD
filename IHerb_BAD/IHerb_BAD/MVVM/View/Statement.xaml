@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:custom="clr-namespace:IHerb_BAD" xmlns:combobox="clr-namespace:Syncfusion.XForms.ComboBox;assembly=Syncfusion.SfComboBox.XForms"
+             xmlns:sync="clr-namespace:Syncfusion.SfCalendar.XForms;assembly=Syncfusion.SfCalendar.XForms"
+             x:Class="IHerb_BAD.MVVM.View.Statement"
+             NavigationPage.HasNavigationBar="False"
+             BackgroundColor="#FFF">
+    <ContentPage.Content>
+        <ScrollView Orientation="Vertical">
+            <StackLayout
+            >
+                <Frame
+                    BackgroundColor="#CEA47D"
+                    CornerRadius="30"
+                       Margin="0,-50">
+                    <StackLayout Orientation="Vertical">
+                        <StackLayout Orientation="Horizontal"
+                         HorizontalOptions="FillAndExpand"
+                         Margin="0,65,0,0"
+                         >
+                            <ImageButton 
+                            Source="LeftYellowArrow.png" 
+                            WidthRequest="40" 
+                            BorderColor="Transparent" 
+                            HorizontalOptions="Start"
+                            BackgroundColor="Transparent"
+                            Command="{Binding BackClick}"
+                            Margin="10"/>
+                            <Label                    
+                            Text="Анализ состояния"
+                            FontSize="25"
+                            Margin="0,10,0,0"
+                            WidthRequest="250"
+                            HorizontalTextAlignment="Center"
+                            TextColor="#FFEEAD"
+                            FontAttributes="Bold"
+                            FontFamily="Roboto"
+                        />
+
+                        </StackLayout>
+                        <StackLayout
+                            Orientation="Vertical"
+                            Margin="25,30,20,50"
+                            Spacing="40">
+                            <StackLayout
+                                Orientation="Horizontal"
+                                HorizontalOptions="CenterAndExpand"
+                                Spacing="1">
+                                <Image Source="ListLight.png"
+                                       HeightRequest="36"/>
+                                <Label 
+                                    Text="{Binding WhatHapened}"
+                                    TextColor="#FFEEAD"
+                                    FontSize="20"
+                                    HorizontalTextAlignment="Center"/>
+                            </StackLayout>
+                            <StackLayout
+                                Orientation="Horizontal"
+                                HorizontalOptions="CenterAndExpand"
+                                Spacing="1">
+                                <Image 
+                                    Source="Drag.png"
+                                    HeightRequest="36"/>
+                                <Label 
+                                    Text="{Binding BadReq}"
+                                    TextColor="#618574"
+                                    FontSize="20"
+                                    HorizontalTextAlignment="Center"/>
+                            </StackLayout>
+                            <StackLayout
+                                Orientation="Horizontal"
+                                HorizontalOptions="CenterAndExpand"
+                                Spacing="1">
+                                <Image Source="HumanRed.png"
+                                       HeightRequest="36"/>
+                                <Label 
+                                    Text="{Binding LifeReq}"
+                                    TextColor="#D9534F"
+                                    FontSize="20"
+                                    HorizontalTextAlignment="Center"/>
+                            </StackLayout>
+                        </StackLayout>
+                        <Button
+                        Text="К рекомендациям"
+                        TextTransform="None"
+                        FontSize="25"
+                        Margin="25,80,25,15"
+                        TextColor="#FFEEAD"
+                        BackgroundColor="#618574"
+                        CornerRadius="30"
+                        Command="{Binding GoToRecs}"
+                        />
+                    </StackLayout>
+                </Frame>
+                
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
