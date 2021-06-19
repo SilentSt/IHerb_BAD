@@ -9,8 +9,9 @@ namespace IHerb_BAD
     {
         public App()
         {
+            Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("NDYxMjQ5QDMxMzkyZTMxMmUzMFhnOFJPelczRnpveUw5aFdXT3lheE42NGIyMmo2cGZpTVBJTDBzWHdEKzg9");
             InitializeComponent();
-            MainPage = new NavigationPage(new Start());
+            MainPage = new NavigationPage(new AnalysiesManager());
         }
 
         protected override void OnStart()

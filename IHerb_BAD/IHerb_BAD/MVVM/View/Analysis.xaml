@@ -31,7 +31,7 @@
                             BorderColor="Transparent" 
                             HorizontalOptions="End"
                             BackgroundColor="Transparent"
-                            Command="{Binding BackClick}"
+                            Command="{Binding SaveClick}"
                             Margin="20"/>
                 
             </StackLayout>
