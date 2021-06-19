@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,11 +12,17 @@ namespace IHerb_BAD.MVVM.View
 {
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class ProfileManager : ContentPage
-	{
-		public ProfileManager ()
-		{
-			InitializeComponent ();
-			BindingContext = new ProfileManagerViewModel() { Navigation = this.Navigation };
-		}
-	}
+    {
+        private UserProfile _user;
+        private ProfileManagerViewModel profileManagerVM;
+		public ProfileManager ( )
+        {
+             
+            profileManagerVM = new ProfileManagerViewModel() { Navigation = this.Navigation };
+
+            InitializeComponent ();
+            BindingContext = profileManagerVM;
+        }
+        
+    }
 }

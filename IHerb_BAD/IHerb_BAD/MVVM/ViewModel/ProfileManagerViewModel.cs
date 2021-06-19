@@ -10,18 +10,19 @@ using Xamarin.Forms;
 namespace IHerb_BAD.MVVM.ViewModel
 {
     class ProfileManagerViewModel : ObservableObject
-    {
+    {   
         public INavigation Navigation { get; set; }
-        private ObservableCollection<User> _users;
         public ICommand AddUser { get; set; }
-        public ProfileManagerViewModel()
+        public ICommand OpenProfile { get; set; }
+        public ProfileManagerViewModel( )
         {
             AddUser = new Command(AddProfile);
+            OpenProfile = new Command(Open);
         }
         public ObservableCollection<User> Users
         {
-            get => _users;
-            set=> _users = value;
+            get { return Data.UserProfile.users; }
+            set { Data.UserProfile.users = value; }
         }
 
         public void AddProfile()
@@ -29,23 +30,12 @@ namespace IHerb_BAD.MVVM.ViewModel
             Navigation.PushAsync(new Profile());
         }
 
-    }
-
-    public class User : ObservableObject
-    {
-        private Image _userImage;
-
-        public Image UserImage
+        public void Open(object sender)
         {
-            get { return _userImage; }
-            set
-            {
-                if (_userImage != value)
-                {
-                    _userImage = value;
-                    OnPropertyChanged();
-                }
-            }
+            var btn = sender as Button;
+            var user = btn.BindingContext as User;
+            //Navigation.PushAsync();
         }
     }
+    
 }
