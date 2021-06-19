@@ -8,6 +8,22 @@ using Xamarin.Forms;
 
 namespace IHerb_BAD.MVVM
 {
+    public enum AnalyseType
+    {
+        OO_Blood,
+        OO_M,
+    }
+    public class AnalyseStat
+    {
+        public string StatName;
+        public string StatValue;
+    }
+
+    public class AnalyseData
+    {
+        public AnalyseType type;
+        public List<AnalyseStat> stats = new List<AnalyseStat>();
+    }
     public class User : ObservableObject
     {
         private Image _userImage;
@@ -31,6 +47,7 @@ namespace IHerb_BAD.MVVM
         public int DavlenieUp { get; set; }
         public int DavlenieDown { get; set; }
         public int Puls { get; set; }
+        public List<AnalyseData> AnalyseData = new List<AnalyseData>();
     }
 
     public class UserProfile

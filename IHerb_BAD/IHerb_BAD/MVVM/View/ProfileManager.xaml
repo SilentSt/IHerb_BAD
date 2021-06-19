@@ -25,7 +25,6 @@
                                         HorizontalOptions="Center" 
                                         WidthRequest="130"
                                         Text="{Binding Nick}"
-                                        BackgroundColor="Transparent"
                                         Command="{Binding OpenProfile}"
                                         CommandParameter="{Binding .}"
                                         CornerRadius="65"/>

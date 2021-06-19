@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.Windows.Input;
 using IHerb_BAD.MVVM.Core;
+using IHerb_BAD.MVVM.View;
 using Xamarin.Forms;
 
 namespace IHerb_BAD.MVVM.ViewModel
@@ -20,7 +21,7 @@ namespace IHerb_BAD.MVVM.ViewModel
 
         public INavigation Navigation { get; set; }
         public ICommand BackClick { get; set; }
-
+        public ICommand GoToAnals { get; set; }
         public ICommand SaveClick { get; set; }
 
         public ProfileViewModel( )
@@ -28,6 +29,21 @@ namespace IHerb_BAD.MVVM.ViewModel
             
             BackClick = new Command(() => Navigation.PopAsync());
             SaveClick = new Command(SaveData);
+            GoToAnals = new Command(() =>
+            {
+                var user = new User()
+                {
+                    UserImage = Image,
+                    Nick = Username,
+                    BirthDate = BirthDate,
+                    Weight = int.Parse(Weight),
+                    Height = int.Parse(Height),
+                    DavlenieUp = int.Parse(Davlenie.Split(' ')[0]),
+                    DavlenieDown = int.Parse(Davlenie.Split(' ')[1]),
+                    Puls = int.Parse(Puls)
+                };
+                Navigation.PushAsync(new AnalysiesManager(user));
+            });
         }
 
         public void SaveData()

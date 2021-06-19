@@ -34,7 +34,7 @@ namespace IHerb_BAD.MVVM.ViewModel
         {
             var btn = sender as Button;
             var user = btn.BindingContext as User;
-            //Navigation.PushAsync();
+            Navigation.PushAsync(new AnalysiesManager(user));
         }
     }
     

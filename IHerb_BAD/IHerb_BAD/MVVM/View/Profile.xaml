@@ -196,6 +196,7 @@
                             Margin="30,0"
                             TextColor="#618574"
                             TextTransform="None"
+                            Command="{Binding GoToAnals}"
                             />
                         <Button
                             Text="Сохранить"
