@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="IHerb_BAD.MVVM.View.Recomendations"
+             BackgroundColor="#CBE7DA"
+             NavigationPage.HasNavigationBar="False">
+    <ContentPage.Content>
+        <ScrollView Orientation="Vertical">
+            <StackLayout 
+            Orientation="Vertical">
+                <StackLayout Orientation="Horizontal"
+                         HorizontalOptions="FillAndExpand"
+                         Margin="0,15,0,0"
+                         >
+                    <ImageButton 
+                            Source="LeftArrowDark.png" 
+                            WidthRequest="40" 
+                            BorderColor="Transparent" 
+                            HorizontalOptions="Start"
+                            BackgroundColor="Transparent"
+                            Command="{Binding BackClick}"
+                            Margin="10"/>
+                    <Label                    
+                            Text="Рекомендации"
+                            FontSize="25"
+                            Margin="15,10,0,0"
+                            WidthRequest="250"
+                            HorizontalTextAlignment="Center"
+                            TextColor="#618574"
+                            FontAttributes="Bold"
+                            FontFamily="Roboto"
+                        />
+                </StackLayout>
+                <Frame 
+                    BackgroundColor="#FFF"
+                    Padding="10,5"
+                    >
+                    <StackLayout
+                        Orientation="Horizontal">
+                        <Image Source="{Binding DragImage}"
+                               HeightRequest="150"
+                               WidthRequest="120"/>
+                        <StackLayout
+                            Orientation="Vertical"
+                            VerticalOptions="Fill"
+                            Margin="10,0,0,0">
+                            <Label Text="{Binding DragName}"
+                                   TextColor="#618574"
+                                   FontAttributes="Bold"
+                                   FontSize="18"/>
+                            <Label Text="{Binding DragDescription}"
+                                   TextColor="#618574"/>
+                            <StackLayout
+                                Orientation="Horizontal"
+                                Margin="0,60,0,0"
+                                >
+                                <Button
+                                    Text="подробнее"
+                                    Command="{Binding GetMoreInfo}"
+                                    BackgroundColor="#FFF"
+                                    TextColor="#96CEB4"
+                                    FontAttributes="Bold"/>
+                                <Button
+                                    Text="похожие"
+                                    Command="{Binding OtherLike}"
+                                    BackgroundColor="#FFF"
+                                    TextColor="#96CEB4"
+                                    FontAttributes="Bold"/>
+                            </StackLayout>
+                        </StackLayout>
+                    </StackLayout>
+                </Frame>
+            </StackLayout>
+        </ScrollView>
+        
+    </ContentPage.Content>
+</ContentPage>

@@ -19,9 +19,11 @@
   <ItemGroup>
     <PackageReference Include="Syncfusion.Licensing" Version="19.1.0.69" />
     <PackageReference Include="Syncfusion.Xamarin.Buttons" Version="19.1.0.69" />
+    <PackageReference Include="Syncfusion.Xamarin.Core" Version="19.1.0.69" />
     <PackageReference Include="Syncfusion.Xamarin.SfCalendar" Version="19.1.0.69" />
     <PackageReference Include="Syncfusion.Xamarin.SfComboBox" Version="19.1.0.69" />
     <PackageReference Include="Syncfusion.Xamarin.SfPicker" Version="19.1.0.69" />
+    <PackageReference Include="Syncfusion.Xamarin.SfProgressBar" Version="19.1.0.69" />
     <PackageReference Include="Syncfusion.Xamarin.SfSchedule" Version="19.1.0.69" />
     <PackageReference Include="Xam.Plugins.Forms.CustomReturnEntry" Version="4.1.1" />
     <PackageReference Include="Xam.Plugins.Forms.ImageCircle" Version="3.0.0.5" />
@@ -45,6 +47,9 @@
     <EmbeddedResource Update="MVVM\View\Login.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+    <EmbeddedResource Update="MVVM\View\MyDrags.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
 
     <EmbeddedResource Update="MVVM\View\Profile.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
@@ -56,12 +61,21 @@
     </EmbeddedResource>
 
 
+    <EmbeddedResource Update="MVVM\View\Recomendations.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+
+
 
     <EmbeddedResource Update="MVVM\View\SignIn.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
 
     <EmbeddedResource Update="MVVM\View\Start.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+
+    <EmbeddedResource Update="MVVM\View\Statement.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
   </ItemGroup>
