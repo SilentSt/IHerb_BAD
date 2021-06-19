@@ -1,8 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:border="clr-namespace:Syncfusion.XForms.Border;assembly=Syncfusion.Core.XForms"
              xmlns:custom="clr-namespace:IHerb_BAD" xmlns:combobox="clr-namespace:Syncfusion.XForms.ComboBox;assembly=Syncfusion.SfComboBox.XForms"
-             xmlns:sync="clr-namespace:Syncfusion.SfCalendar.XForms;assembly=Syncfusion.SfCalendar.XForms"
+             xmlns:sync="clr-namespace:Syncfusion.SfCalendar.XForms;assembly=Syncfusion.SfCalendar.XForms" xmlns:buttons="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms"
              x:Class="IHerb_BAD.MVVM.View.Calendar"
              NavigationPage.HasNavigationBar="False"
              BackgroundColor="#CEA47D">
@@ -10,14 +11,19 @@
         <ScrollView Orientation="Vertical">
             <StackLayout
             >
-                <Frame CornerRadius="30"
+                <border:SfBorder
+                    BorderColor="Transparent"
+                    BorderWidth="0"
+                    BorderThickness="0"
+                    HasShadow="True">
+                    <Frame CornerRadius="30"
                        Margin="0,-50">
-                    <StackLayout Orientation="Vertical">
-                        <StackLayout Orientation="Horizontal"
+                        <StackLayout Orientation="Vertical">
+                            <StackLayout Orientation="Horizontal"
                          HorizontalOptions="FillAndExpand"
                          Margin="0,65,0,0"
                          >
-                            <ImageButton 
+                                <ImageButton 
                             Source="back.png" 
                             WidthRequest="40" 
                             BorderColor="Transparent" 
@@ -25,7 +31,7 @@
                             BackgroundColor="Transparent"
                             Command="{Binding BackClick}"
                             Margin="10"/>
-                            <Label                    
+                                <Label                    
                             Text="Календарь"
                             FontSize="30"
                             Margin="0,5,0,0"
@@ -35,8 +41,12 @@
                             FontAttributes="Bold"
                             FontFamily="Roboto"
                         />
-                        </StackLayout>
-                        <combobox:SfComboBox 
+                            </StackLayout>
+                            <border:SfBorder
+                    BorderColor="#CEA47D"
+                    BorderWidth="3"                    
+                    HasShadow="True">
+                                <combobox:SfComboBox 
                         HeightRequest="40" 
                         Text="{Binding CalendarType}"
                         x:Name="comboBox"
@@ -50,20 +60,23 @@
                         TextHighlightMode="MultipleOccurrence"
                         SelectedDropDownItemColor="#618574"
                         TextColor="#CEA47D"
-                        TextSize="20"
+                        TextSize="20"                               
                         >
-                        </combobox:SfComboBox>
-                        <sync:SfCalendar
+                                </combobox:SfComboBox>
+                            </border:SfBorder>
+                            <sync:SfCalendar
                 HorizontalOptions="Center"
                 BackgroundColor="#FFF"
                             SelectedDates="{Binding SelectedDates}"
                 >
-                        </sync:SfCalendar>
-                    </StackLayout>
-                </Frame>
-                <Button
+                            </sync:SfCalendar>
+                        </StackLayout>
+                    </Frame>
+                </border:SfBorder>
+
+                <buttons:SfButton
                         Text="Сохранить"
-                        TextTransform="None"
+                        HasShadow="True"
                         FontSize="25"
                         Margin="25,80"
                         TextColor="#618574"

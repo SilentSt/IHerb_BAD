@@ -8,7 +8,7 @@
         <StackLayout Orientation="Vertical">
             <StackLayout Orientation="Horizontal">
                 <ImageButton 
-                            Source="back.png" 
+                            Source="LeftArrowDark.png" 
                             WidthRequest="40" 
                             BorderColor="Transparent" 
                             HorizontalOptions="Start"
@@ -25,7 +25,7 @@
                             FontFamily="Roboto"
                         />
                 <ImageButton 
-                            Source="save.png" 
+                            Source="readyGreen.png" 
                             WidthRequest="25"
                             HeightRequest="25"
                             BorderColor="Transparent" 
