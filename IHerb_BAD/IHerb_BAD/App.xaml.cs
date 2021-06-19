@@ -14,7 +14,7 @@ namespace IHerb_BAD
             //MainPage = new NavigationPage(new Profile());
 
 
-            MainPage = new NavigationPage(new Profile());
+            MainPage = new NavigationPage(new Analysis());
 
 
         }
