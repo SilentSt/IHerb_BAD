@@ -27,7 +27,7 @@ namespace IHerb_BAD.MVVM.ViewModel
         }
         public void LoginClick()
         {
-            Navigation.PushAsync(new Profile());
+            Navigation.PushAsync(new Login());
         }
     }
 }

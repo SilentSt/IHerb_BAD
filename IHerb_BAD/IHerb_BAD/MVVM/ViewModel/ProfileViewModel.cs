@@ -2,10 +2,13 @@
 using System.Collections.Generic;
 using System.Text;
 using IHerb_BAD.MVVM.Core;
+using Xamarin.Forms;
 
 namespace IHerb_BAD.MVVM.ViewModel
 {
     class ProfileViewModel : ObservableObject
     {
+        public INavigation Navigation { get; set; }
+
     }
 }
