@@ -16827,67 +16827,70 @@ namespace IHerb_BAD.Droid
 			public const int notify_panel_notification_icon_bg = 2131165376;
 			
 			// aapt resource value: 0x7F0700C1
-			public const int readyGreen = 2131165377;
+			public const int Omega = 2131165377;
 			
 			// aapt resource value: 0x7F0700C2
-			public const int readyYelow = 2131165378;
+			public const int readyGreen = 2131165378;
 			
 			// aapt resource value: 0x7F0700C3
-			public const int Recurrence = 2131165379;
+			public const int readyYelow = 2131165379;
 			
 			// aapt resource value: 0x7F0700C4
-			public const int save = 2131165380;
+			public const int Recurrence = 2131165380;
 			
 			// aapt resource value: 0x7F0700C5
-			public const int Settings = 2131165381;
+			public const int save = 2131165381;
 			
 			// aapt resource value: 0x7F0700C6
-			public const int sfcheckbox_animation = 2131165382;
+			public const int Settings = 2131165382;
 			
 			// aapt resource value: 0x7F0700C7
-			public const int sfcheckbox_checked = 2131165383;
+			public const int sfcheckbox_animation = 2131165383;
 			
 			// aapt resource value: 0x7F0700C8
-			public const int sfcheckbox_checked_indeterminate = 2131165384;
+			public const int sfcheckbox_checked = 2131165384;
 			
 			// aapt resource value: 0x7F0700C9
-			public const int sfcheckbox_checked_unchecked = 2131165385;
+			public const int sfcheckbox_checked_indeterminate = 2131165385;
 			
 			// aapt resource value: 0x7F0700CA
-			public const int sfcheckbox_indeterminate = 2131165386;
+			public const int sfcheckbox_checked_unchecked = 2131165386;
 			
 			// aapt resource value: 0x7F0700CB
-			public const int sfcheckbox_indeterminate_checked = 2131165387;
+			public const int sfcheckbox_indeterminate = 2131165387;
 			
 			// aapt resource value: 0x7F0700CC
-			public const int sfcheckbox_indeterminate_unchecked = 2131165388;
+			public const int sfcheckbox_indeterminate_checked = 2131165388;
 			
 			// aapt resource value: 0x7F0700CD
-			public const int sfcheckbox_unchecked = 2131165389;
+			public const int sfcheckbox_indeterminate_unchecked = 2131165389;
 			
 			// aapt resource value: 0x7F0700CE
-			public const int sfcheckbox_unchecked_checked = 2131165390;
+			public const int sfcheckbox_unchecked = 2131165390;
 			
 			// aapt resource value: 0x7F0700CF
-			public const int sfcheckbox_unchecked_indeterminate = 2131165391;
+			public const int sfcheckbox_unchecked_checked = 2131165391;
 			
 			// aapt resource value: 0x7F0700D0
-			public const int StartLogo = 2131165392;
+			public const int sfcheckbox_unchecked_indeterminate = 2131165392;
 			
 			// aapt resource value: 0x7F0700D1
-			public const int test_custom_background = 2131165393;
+			public const int StartLogo = 2131165393;
 			
 			// aapt resource value: 0x7F0700D2
-			public const int tooltip_frame_dark = 2131165394;
+			public const int test_custom_background = 2131165394;
 			
 			// aapt resource value: 0x7F0700D3
-			public const int tooltip_frame_light = 2131165395;
+			public const int tooltip_frame_dark = 2131165395;
 			
 			// aapt resource value: 0x7F0700D4
-			public const int unnamed = 2131165396;
+			public const int tooltip_frame_light = 2131165396;
 			
 			// aapt resource value: 0x7F0700D5
-			public const int Zamok = 2131165397;
+			public const int unnamed = 2131165397;
+			
+			// aapt resource value: 0x7F0700D6
+			public const int Zamok = 2131165398;
 			
 			static Drawable()
 			{

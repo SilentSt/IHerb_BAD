@@ -56,6 +56,11 @@
     </EmbeddedResource>
 
 
+    <EmbeddedResource Update="MVVM\View\Recomendations.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+
+
 
     <EmbeddedResource Update="MVVM\View\SignIn.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
