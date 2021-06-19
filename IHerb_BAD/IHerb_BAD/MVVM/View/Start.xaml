@@ -17,7 +17,8 @@
                     Command="{Binding Login}"
                     Margin="20,10,20,0"/>
             <Button Text="Регистрация" 
-                    TextColor="White" 
+                    TextColor="White"
+                    Command="{Binding SignIn}"
                     CornerRadius="25" 
                     BackgroundColor="#E3C13C"
                     Margin="20,10,20,0"/>
