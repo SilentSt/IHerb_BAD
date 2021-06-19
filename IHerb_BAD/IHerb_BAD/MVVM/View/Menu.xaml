@@ -1,0 +1,156 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:combobox="clr-namespace:Syncfusion.XForms.ComboBox;assembly=Syncfusion.SfComboBox.XForms"
+             xmlns:sync="clr-namespace:Syncfusion.XForms.Pickers;assembly=Syncfusion.SfPicker.XForms"
+             xmlns:buttons="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms"
+             xmlns:border="clr-namespace:Syncfusion.XForms.Border;assembly=Syncfusion.Core.XForms" 
+             xmlns:local="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin"
+             x:Class="IHerb_BAD.MVVM.View.Menu"
+             NavigationPage.HasNavigationBar="False">
+    <ContentPage.Content>
+        <StackLayout 
+            VerticalOptions="FillAndExpand"
+            Orientation="Vertical">
+            <StackLayout Orientation="Horizontal">
+                <ImageButton 
+                            Source="back.png" 
+                            WidthRequest="40" 
+                            BorderColor="Transparent" 
+                            HorizontalOptions="Start"
+                            BackgroundColor="Transparent"
+                            Command="{Binding BackClick}"
+                            Margin="20"/>
+                <Label
+                            Text="{Binding Username}"
+                            FontSize="20"
+                            WidthRequest="230"
+                            HorizontalTextAlignment="Center"                                                        
+                            TextColor="#618574"
+                            FontAttributes="Bold"
+                            FontFamily="Roboto"
+                        />
+            </StackLayout>
+            <local:CircleImage                           
+                    Source="{Binding UserImage}"               
+                    Aspect="AspectFit"
+                    WidthRequest="130"
+                    HeightRequest="130"
+                    Margin="0,0,0,25"
+                    BorderColor="#96CEB4"
+                    BorderThickness="2"/>
+            <Frame
+                  BackgroundColor="#96CEB4"
+                  HeightRequest="600"
+                  CornerRadius="30"
+                  Margin="0,0,0,-50"
+                  >
+                <ScrollView Orientation="Vertical" VerticalScrollBarVisibility="Never">
+                    <StackLayout Orientation="Vertical">
+
+                        <buttons:SfButton
+                        Text="Информация пользователя"                        
+                        FontSize="20"                           
+                        TextColor="#618574"
+                        BackgroundColor="#FFEEAD"
+                        CornerRadius="30"
+                        Padding="0,10"
+                        HorizontalTextAlignment="Start"
+                        HasShadow="True"
+                        Command="{Binding ShowUserInfo}"
+                        Margin="30,5"
+                        ImageSource="gr1.png"
+                        ShowIcon="True"/>
+                        
+                        <buttons:SfButton
+                        Text="Контроль приема"                        
+                        FontSize="20"                           
+                        TextColor="#618574"
+                        BackgroundColor="#FFEEAD"
+                        CornerRadius="30"
+                        Padding="0,10"
+                        HorizontalTextAlignment="Start"
+                        HasShadow="True"
+                        Command="{Binding ControlUsing}"
+                        Margin="30,5"
+                        ImageSource="gr2.png"
+                        ShowIcon="True"/>
+                        
+                        <buttons:SfButton
+                        Text="Мои препараты"                        
+                        FontSize="20"                           
+                        TextColor="#618574"
+                        BackgroundColor="#FFEEAD"
+                        CornerRadius="30"
+                        Padding="0,10"
+                        HorizontalTextAlignment="Start"
+                        HasShadow="True"
+                        Command="{Binding MyDrags}"
+                        Margin="30,5"
+                        ImageSource="gr3.png"
+                        ShowIcon="True"/>
+                        
+                        <buttons:SfButton
+                        Text="Календарь"                        
+                        FontSize="20"                           
+                        TextColor="#618574"
+                        BackgroundColor="#FFEEAD"
+                        CornerRadius="30"
+                        Padding="0,10"
+                        HorizontalTextAlignment="Start"
+                        HasShadow="True"
+                        Command="{Binding Calendar}"
+                        Margin="30,5"
+                        ImageSource="gr4.png"
+                        ShowIcon="True"/>
+                        
+                        <buttons:SfButton
+                        Text="Состояние"                        
+                        FontSize="20"                           
+                        TextColor="#618574"
+                        BackgroundColor="#FFEEAD"
+                        CornerRadius="30"
+                        Padding="0,10"
+                        HorizontalTextAlignment="Start"
+                        HasShadow="True"
+                        Command="{Binding Statement}"
+                        Margin="30,5"
+                        ImageSource="gr5.png"
+                        ShowIcon="True"/>
+                        
+                        <buttons:SfButton
+                        Text="Рекомендации"                        
+                        FontSize="20"                           
+                        TextColor="#618574"
+                        BackgroundColor="#FFEEAD"
+                        CornerRadius="30"
+                        Padding="0,10"
+                        HorizontalTextAlignment="Start"
+                        HasShadow="True"
+                        Command="{Binding Recomends}"
+                        Margin="30,5"
+                        ImageSource="gr6.png"
+                        ShowIcon="True"/>
+                        
+                        <buttons:SfButton
+                        Text="Удалить пользователя"                        
+                        FontSize="20"                           
+                        TextColor="#618574"
+                        BackgroundColor="#FFEEAD"
+                        CornerRadius="30"
+                        Padding="0,10"
+                        HorizontalTextAlignment="Start"
+                        HasShadow="True"
+                        Command="{Binding DeleteUser}"
+                        Margin="30,5,30,45"
+                        ImageSource="gr7.png"
+                        ShowIcon="True"/>
+                        
+                    </StackLayout>
+                </ScrollView>
+                
+            </Frame>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
