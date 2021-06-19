@@ -15,8 +15,8 @@ namespace IHerb_BAD.MVVM
     }
     public class AnalyseStat
     {
-        public string StatName;
-        public string StatValue;
+        public string StatName { get; set; }
+        public string StatValue { get; set; }
     }
 
     public class AnalyseData

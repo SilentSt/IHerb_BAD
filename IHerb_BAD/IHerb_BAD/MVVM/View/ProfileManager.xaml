@@ -2,6 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin" xmlns:buttons="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms"
+             xmlns:viewModel="clr-namespace:IHerb_BAD.MVVM.ViewModel;assembly=IHerb_BAD"
              x:Class="IHerb_BAD.MVVM.View.ProfileManager"
              BackgroundColor="#CEA47D"
              NavigationPage.HasNavigationBar="False">
@@ -30,7 +31,7 @@
                                               BorderThickness="1"
                                               ShowIcon="True"
                                               BackgroundColor="Transparent"
-                                              Command="{Binding OpenProfile}"
+                                              Command="{Binding Source={RelativeSource AncestorType={x:Type viewModel:ProfileManagerViewModel}}, Path=OpenProfile}"
                                               CommandParameter="{Binding .}"
                                               CornerRadius="65">
                             </buttons:SfButton>
