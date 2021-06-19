@@ -38,8 +38,8 @@ namespace IHerb_BAD.MVVM.ViewModel
                     BirthDate = BirthDate,
                     Weight = int.Parse(Weight),
                     Height = int.Parse(Height),
-                    DavlenieUp = int.Parse(Davlenie.Split(' ')[0]),
-                    DavlenieDown = int.Parse(Davlenie.Split(' ')[1]),
+                    DavlenieUp = int.Parse(Davlenie.Split('.')[0]),
+                    DavlenieDown = int.Parse(Davlenie.Split('.')[1]),
                     Puls = int.Parse(Puls)
                 };
                 Navigation.PushAsync(new AnalysiesManager(user));
@@ -55,8 +55,8 @@ namespace IHerb_BAD.MVVM.ViewModel
                 BirthDate = BirthDate,
                 Weight = int.Parse(Weight),
                 Height = int.Parse(Height),
-                DavlenieUp = int.Parse(Davlenie.Split(' ')[0]),
-                DavlenieDown = int.Parse(Davlenie.Split(' ')[1]),
+                DavlenieUp = int.Parse(Davlenie.Split('.')[0]),
+                DavlenieDown = int.Parse(Davlenie.Split('.')[1]),
                 Puls = int.Parse(Puls)
             };
             Data.UserProfile.users.Add(user);
