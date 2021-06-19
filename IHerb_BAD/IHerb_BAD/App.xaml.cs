@@ -11,7 +11,11 @@ namespace IHerb_BAD
         {
             InitializeComponent();
 
+            //MainPage = new NavigationPage(new Profile());
+
+
             MainPage = new NavigationPage(new Start());
+
 
         }
 

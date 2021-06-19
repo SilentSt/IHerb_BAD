@@ -42,6 +42,13 @@
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
 
+
+    <EmbeddedResource Update="MVVM\View\ProfileManager.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+
+
+
     <EmbeddedResource Update="MVVM\View\SignIn.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
@@ -53,6 +60,7 @@
 
   <ItemGroup>
     <Folder Include="Theme\" />
+
 
   </ItemGroup>
 </Project>
