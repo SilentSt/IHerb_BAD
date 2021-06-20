@@ -22,6 +22,11 @@ namespace IHerb_BAD.MVVM
     public class AnalyseData
     {
         public AnalyseType type;
+
+        public string AnalysType
+        {
+            get { return AnalyseGetter.nameGetter[type]; }
+        }
         public List<AnalyseStat> stats = new List<AnalyseStat>();
     }
     public class User : ObservableObject

@@ -32,6 +32,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Update="MVVM\View\MenuP.xaml.cs">
+      <DependentUpon>MenuP.xaml</DependentUpon>
+    </Compile>
     <Compile Update="MVVM\View\Start.xaml.cs">
       <DependentUpon>Start.xaml</DependentUpon>
     </Compile>
@@ -50,7 +53,7 @@
     <EmbeddedResource Update="MVVM\View\Login.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="MVVM\View\Menu.xaml">
+    <EmbeddedResource Update="MVVM\View\MenuP.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="MVVM\View\MyDrags.xaml">

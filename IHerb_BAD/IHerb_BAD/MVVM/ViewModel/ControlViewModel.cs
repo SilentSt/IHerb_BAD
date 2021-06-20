@@ -10,11 +10,14 @@ namespace IHerb_BAD.MVVM.ViewModel
 {
     class ControlViewModel:ObservableObject
     {
+        public INavigation Navigation { get; set; }
+        public ICommand BackClick { get; set; }
         public ICommand ShowDatePicker { get; set; }
         public string selDate { get; set; } = "< Выберите дату >";
         public ControlViewModel()
         {
             ShowDatePicker = new Command(OpenDatePicker);
+            BackClick = new Command(() => Navigation.PopAsync());
         }
         public void OpenDatePicker(object sender)
         {            

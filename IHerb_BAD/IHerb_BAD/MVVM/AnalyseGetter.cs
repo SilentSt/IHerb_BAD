@@ -22,5 +22,11 @@ namespace IHerb_BAD.MVVM
             }
         };
 
+        public static Dictionary<AnalyseType, string> nameGetter = new Dictionary<AnalyseType, string>()
+        {
+            {AnalyseType.OO_Blood,"Общий анализ крови"},
+            {AnalyseType.OO_M,"Общий анализ мочи"}
+        };
+
     }
 }

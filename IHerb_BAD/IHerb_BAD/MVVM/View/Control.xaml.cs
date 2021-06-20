@@ -16,7 +16,7 @@ namespace IHerb_BAD.MVVM.View
         public Control()
         {
             InitializeComponent();
-            BindingContext = new ControlViewModel();
+            BindingContext = new ControlViewModel(){Navigation = this.Navigation};
         }
     }
 }

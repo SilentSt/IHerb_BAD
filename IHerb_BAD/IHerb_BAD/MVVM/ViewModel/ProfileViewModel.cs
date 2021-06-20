@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 using System.Windows.Input;
 using IHerb_BAD.MVVM.Core;
@@ -42,24 +43,29 @@ namespace IHerb_BAD.MVVM.ViewModel
                     DavlenieDown = int.Parse(Davlenie.Replace(',', '.').Split('.')[1]),
                     Puls = int.Parse(Puls)
                 };
+                Data.UserProfile.users.Add(user);
                 Navigation.PushAsync(new AnalysiesManager(user));
             });
         }
 
         public void SaveData()
         {
-            var user = new User()
+            if (Data.UserProfile.users.All(x => x.Nick != Username))
             {
-                UserImage = Image,
-                Nick = Username,
-                BirthDate = BirthDate,
-                Weight = int.Parse(Weight),
-                Height = int.Parse(Height),
-                DavlenieUp = int.Parse(Davlenie.Split('.')[0]),
-                DavlenieDown = int.Parse(Davlenie.Split('.')[1]),
-                Puls = int.Parse(Puls)
-            };
-            Data.UserProfile.users.Add(user);
+                var user = new User()
+                {
+                    UserImage = Image,
+                    Nick = Username,
+                    BirthDate = BirthDate,
+                    Weight = int.Parse(Weight),
+                    Height = int.Parse(Height),
+                    DavlenieUp = int.Parse(Davlenie.Replace(',','.').Split('.')[0]),
+                    DavlenieDown = int.Parse(Davlenie.Replace(',', '.').Split('.')[1]),
+                    Puls = int.Parse(Puls)
+                };
+                Data.UserProfile.users.Add(user);
+            }
+            
             Navigation.PopAsync();
         }
     }

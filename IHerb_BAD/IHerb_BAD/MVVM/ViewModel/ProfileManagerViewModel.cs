@@ -32,9 +32,8 @@ namespace IHerb_BAD.MVVM.ViewModel
 
         public void Open(object sender)
         {
-            var btn = sender as Button;
-            var user = btn.BindingContext as User;
-            Navigation.PushAsync(new AnalysiesManager(user));
+            var user = sender as User;
+            Navigation.PushAsync(new MenuP(user));
         }
     }
     
