@@ -59,6 +59,9 @@
                         TextSize="20">
                         <combobox:SfComboBox.ComboBoxSource>
                             <ListCollection:List x:TypeArguments="x:String">
+                                <x:String>Общий анализ крови</x:String>
+                                <x:String>Анализ мочи</x:String>
+                                <x:String>Биохимический анализ</x:String>
                             </ListCollection:List>
                         </combobox:SfComboBox.ComboBoxSource>
                     </combobox:SfComboBox>
