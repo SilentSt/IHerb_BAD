@@ -8,7 +8,7 @@ namespace IHerb_BAD.MVVM.ViewModel
 {
     class AnalysisModelView
     {
-        private ObservableCollection<AnalyseStat> AnalStats;
+        public ObservableCollection<AnalyseStat> AnalStats { get; set; }
         public AnalysisModelView(User user)
         {
             AnalStats = new ObservableCollection<AnalyseStat>(user.AnalyseData.Last().stats);
