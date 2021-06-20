@@ -33,7 +33,7 @@ namespace IHerb_BAD.MVVM.ViewModel
         public void Open(object sender)
         {
             var user = sender as User;
-            Navigation.PushModalAsync(new MenuP(user));
+            Navigation.PushAsync(new MenuP(user));
         }
     }
     

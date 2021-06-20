@@ -27,7 +27,7 @@ namespace IHerb_BAD.MVVM.ViewModel
         {
             BackClick = new Command(() => Navigation.PopAsync());
             ShowUserInfo = new Command(() => Navigation.PushAsync(new Profile()));
-            ControlUsing = new Command(() => Navigation.PopAsync());
+            ControlUsing = new Command(() => Navigation.PushAsync(new Control()));
             MyDrags = new Command(() => Navigation.PushAsync(new MyDrags()));
             Calendar = new Command(() => Navigation.PushAsync(new Calendar()));
             Statement = new Command(() => Navigation.PushAsync(new Statement()));
