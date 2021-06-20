@@ -5,6 +5,7 @@
              xmlns:entry="clr-namespace:EntryCustomReturn.Forms.Plugin.Abstractions;assembly=EntryCustomReturn.Forms.Plugin.Abstractions"
              xmlns:buttons="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms"
              xmlns:custom="clr-namespace:IHerb_BAD"
+             xmlns:generic="clr-namespace:System.Collections.Generic;assembly=netstandard"
              xmlns:sync="clr-namespace:Syncfusion.XForms.Pickers;assembly=Syncfusion.SfPicker.XForms"
              xmlns:combobox="clr-namespace:Syncfusion.XForms.ComboBox;assembly=Syncfusion.SfComboBox.XForms"
              x:Class="IHerb_BAD.MVVM.View.Profile"
@@ -213,12 +214,19 @@
                         DropDownCornerRadius="15"
                         DropDownTextColor="#FFEEAD"
                         DropDownTextSize="15"
-                         MultiSelectMode="Delimiter"                                
+                         MultiSelectMode="Token"                                
                         TextHighlightMode="MultipleOccurrence"
                         SelectedDropDownItemColor="#FFEEAD"
                         TextColor="#CEA47D"
                         TextSize="20"
                         >
+                                <combobox:SfComboBox.ComboBoxSource>
+                                    <generic:List x:TypeArguments="x:String">
+                                        <x:String>Инсулиновый сахарный диабет</x:String>
+                                        <x:String>Астма</x:String>
+                                        <x:String>Нарушения легочного кровообращения</x:String>
+                                    </generic:List>
+                                </combobox:SfComboBox.ComboBoxSource>
                             </combobox:SfComboBox>
                         </RelativeLayout>
                        
@@ -242,7 +250,7 @@
                         Text="{Binding Alergy}"
                         Margin="40,0"                      
                         BorderColor="Transparent"
-                                MultiSelectMode="Delimiter"
+                                MultiSelectMode="Token"
                         DropDownBackgroundColor="#FFF"
                         DropDownBorderColor="#FFEEAD"
                         DropDownCornerRadius="15"
@@ -253,6 +261,13 @@
                         TextColor="#CEA47D"
                         TextSize="20"
                         >
+                                <combobox:SfComboBox.ComboBoxSource>
+                                    <generic:List x:TypeArguments="x:String">
+                                        <x:String>Ромашка</x:String>
+                                        <x:String>Мята</x:String>
+                                        <x:String>Мелиса</x:String>
+                                    </generic:List>
+                                </combobox:SfComboBox.ComboBoxSource>
                             </combobox:SfComboBox>
                         </RelativeLayout>
                         <Label 
@@ -275,7 +290,7 @@
                         Text="{Binding DragsUsed}"
                         Margin="40,0"                      
                         BorderColor="Transparent"
-                                MultiSelectMode="Delimiter"
+                                MultiSelectMode="Token"
                         DropDownBackgroundColor="#FFF"
                         DropDownBorderColor="#FFEEAD"
                         DropDownCornerRadius="15"
@@ -286,6 +301,13 @@
                         TextColor="#CEA47D"
                         TextSize="20"
                         >
+                                <combobox:SfComboBox.ComboBoxSource>
+                                    <generic:List x:TypeArguments="x:String">
+                                        <x:String>нет</x:String>
+                                        <x:String>Абинол</x:String>
+                                        <x:String>Обеграсс</x:String>
+                                    </generic:List>
+                                </combobox:SfComboBox.ComboBoxSource>
                             </combobox:SfComboBox>
                         </RelativeLayout>
                         <buttons:SfButton

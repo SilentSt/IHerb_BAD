@@ -51,7 +51,7 @@
                                 <Image Source="ListLight.png"
                                        HeightRequest="36"/>
                                 <Label 
-                                    Text="{Binding WhatHapened}"
+                                    Text="У вас понижен имунитет"
                                     TextColor="#FFEEAD"
                                     FontSize="20"
                                     HorizontalTextAlignment="Center"/>
@@ -64,7 +64,7 @@
                                     Source="Drag.png"
                                     HeightRequest="36"/>
                                 <Label 
-                                    Text="{Binding BadReq}"
+                                    Text="К употреблению рекомендуются витамины и иммунустимулирующие бады."
                                     TextColor="#618574"
                                     FontSize="20"
                                     HorizontalTextAlignment="Center"/>
@@ -76,7 +76,7 @@
                                 <Image Source="HumanRed.png"
                                        HeightRequest="36"/>
                                 <Label 
-                                    Text="{Binding LifeReq}"
+                                    Text="Спите не менее 8 часов в сутки, пейте достаточно воды и проводите больше времени не свежем воздухе"
                                     TextColor="#D9534F"
                                     FontSize="20"
                                     HorizontalTextAlignment="Center"/>

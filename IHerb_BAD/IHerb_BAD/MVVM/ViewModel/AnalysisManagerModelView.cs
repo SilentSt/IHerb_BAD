@@ -19,7 +19,7 @@ namespace IHerb_BAD.MVVM.ViewModel
         {
             _user = user;
             Save = new Command(SaveAndGo);
-            BackClick = new Command(() => Navigation.PopModalAsync());
+            BackClick = new Command(() => Navigation.PopAsync());
         }
 
         public void SaveAndGo()

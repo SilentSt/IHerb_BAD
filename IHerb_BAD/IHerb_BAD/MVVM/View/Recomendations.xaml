@@ -7,7 +7,8 @@
     <ContentPage.Content>
         <ScrollView Orientation="Vertical">
             <StackLayout 
-            Orientation="Vertical">
+            Orientation="Vertical"
+                Spacing="25">
                 <StackLayout Orientation="Horizontal"
                          HorizontalOptions="FillAndExpand"
                          Margin="0,15,0,0"
@@ -37,18 +38,96 @@
                     >
                     <StackLayout
                         Orientation="Horizontal">
-                        <Image Source="{Binding DragImage}"
+                        <Image Source="Omega.png"
                                HeightRequest="150"
                                WidthRequest="120"/>
                         <StackLayout
                             Orientation="Vertical"
                             VerticalOptions="Fill"
                             Margin="10,0,0,0">
-                            <Label Text="{Binding DragName}"
+                            <Label Text="Омега-3"
                                    TextColor="#618574"
                                    FontAttributes="Bold"
                                    FontSize="18"/>
-                            <Label Text="{Binding DragDescription}"
+                            <Label Text="Поддерживает здоровье сердечно-сосудистой системы, суставов и обмена веществ"
+                                   TextColor="#618574"/>
+                            <StackLayout
+                                Orientation="Horizontal"
+                                Margin="0,60,0,0"
+                                >
+                                <Button
+                                    Text="подробнее"
+                                    Command="{Binding GetMoreInfo}"
+                                    BackgroundColor="#FFF"
+                                    TextColor="#96CEB4"
+                                    FontAttributes="Bold"/>
+                                <Button
+                                    Text="похожие"
+                                    Command="{Binding OtherLike}"
+                                    BackgroundColor="#FFF"
+                                    TextColor="#96CEB4"
+                                    FontAttributes="Bold"/>
+                            </StackLayout>
+                        </StackLayout>
+                    </StackLayout>
+                </Frame>
+                <Frame 
+                    BackgroundColor="#FFF"
+                    Padding="10,5"
+                    >
+                    <StackLayout
+                        Orientation="Horizontal">
+                        <Image Source="Century.png"
+                               HeightRequest="150"
+                               WidthRequest="120"/>
+                        <StackLayout
+                            Orientation="Vertical"
+                            VerticalOptions="Fill"
+                            Margin="10,0,0,0">
+                            <Label Text="Кальций, магний, цинк и витамин D3"
+                                   TextColor="#618574"
+                                   FontAttributes="Bold"
+                                   FontSize="18"/>
+                            <Label Text="Поддерживает здоровье костей и мышц, а также способствует укреплению имунитета"
+                                   TextColor="#618574"/>
+                            <StackLayout
+                                Orientation="Horizontal"
+                                Margin="0,60,0,0"
+                                >
+                                <Button
+                                    Text="подробнее"
+                                    Command="{Binding GetMoreInfo}"
+                                    BackgroundColor="#FFF"
+                                    TextColor="#96CEB4"
+                                    FontAttributes="Bold"/>
+                                <Button
+                                    Text="похожие"
+                                    Command="{Binding OtherLike}"
+                                    BackgroundColor="#FFF"
+                                    TextColor="#96CEB4"
+                                    FontAttributes="Bold"/>
+                            </StackLayout>
+                        </StackLayout>
+                    </StackLayout>
+                </Frame>
+                <Frame 
+                    BackgroundColor="#FFF"
+                    Padding="10,5"
+                    >
+                    <StackLayout
+                        Orientation="Horizontal">
+                        <Image Source="bud2.png"
+                               HeightRequest="150"
+                               WidthRequest="120"/>
+                        <StackLayout
+                            Orientation="Vertical"
+                            VerticalOptions="Fill"
+                            Margin="10,0,0,0">
+                            <Label Text="Средство для укрепления имунитета"
+                                   TextColor="#618574"
+                                   FontAttributes="Bold"
+                                   FontSize="18"/>
+                            <Label Text="Поддерживает здоровье костей и мышц, а также способствует укреплению имунитета"
                                    TextColor="#618574"/>
                             <StackLayout
                                 Orientation="Horizontal"

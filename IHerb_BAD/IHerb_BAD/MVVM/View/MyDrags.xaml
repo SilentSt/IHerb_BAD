@@ -16,6 +16,7 @@
                 <StackLayout Orientation="Horizontal"
                          HorizontalOptions="FillAndExpand"
                          Margin="0,15,0,0"
+                             Spacing="25"
                          >
                     <ImageButton 
                             Source="LeftArrowDark.png" 
@@ -50,33 +51,73 @@
                     >
                         <StackLayout
                         Orientation="Horizontal">
-                            <Image Source="{Binding DragImage}"
+                            <Image Source="Century.png"
                                HeightRequest="150"
                                WidthRequest="120"/>
                             <StackLayout
                             Orientation="Vertical"
                             VerticalOptions="Fill"
                             Margin="10,0,0,0">
-                                <Label Text="{Binding DragName}"
+                                    <Label Text="21st Century
+                                       кальций, магний, цинк и витамин D3"
                                    TextColor="#618574"
                                    FontAttributes="Bold"
                                    FontSize="18"/>
-                                <Label Text="{Binding DragDescription}"
+                                <Label Text="1 таблтетку во время приема пищи 3 раза в день"
                                    TextColor="#618574"/>
                                     <progressBar:SfLinearProgressBar
-                                        Progress="{Binding DrunkDrag}"
+                                        Progress="35"
                                         ProgressColor="#618574"
                                         WidthRequest="200"/>
-                                    <Label Text="{Binding Count}"
+                                    <Label Text="37/90 шт"
                                            TextColor="#E3C13C"/>
-                                    <Label Text="{Binding StartDrink}"
+                                    <Label Text="Принимаю с 10/06/21"
                                            TextColor="#618574"/>
                                 </StackLayout>
                         </StackLayout>
                     </Frame>
                 </border:SfBorder>
+                    <border:SfBorder
+                    BorderColor="Transparent"
+                    BorderWidth="0"
+                    BorderThickness="0"
+                    HasShadow="True"
+                    ShadowColor="#000">
 
-            </StackLayout>
+
+                        <Frame 
+                    BackgroundColor="#FFF"
+                    Padding="10,5"
+                    >
+                            <StackLayout
+                        Orientation="Horizontal">
+                                <Image Source="Century.png"
+                               HeightRequest="150"
+                               WidthRequest="120"/>
+                                <StackLayout
+                            Orientation="Vertical"
+                            VerticalOptions="Fill"
+                            Margin="10,0,0,0">
+                                    <Label Text="World Organic
+                                            жидкий хлорофилл"
+                                   TextColor="#618574"
+                                   FontAttributes="Bold"
+                                   FontSize="18"/>
+                                    <Label Text="15 мл растворить в стакане воды или сока 1 раз в день за 30 минут до приема пищи"
+                                   TextColor="#618574"/>
+                                    <progressBar:SfLinearProgressBar
+                                        Progress="20"
+                                        ProgressColor="#618574"
+                                        WidthRequest="200"/>
+                                    <Label Text="196/474 мл"
+                                           TextColor="#E3C13C"/>
+                                    <Label Text="Принимаю с 05/06/21"
+                                           TextColor="#618574"/>
+                                </StackLayout>
+                            </StackLayout>
+                        </Frame>
+                    </border:SfBorder>
+                </StackLayout>
         </ScrollView>
             <buttons:SfButton
                     Text="Добавить"
