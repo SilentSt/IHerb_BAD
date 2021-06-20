@@ -10,7 +10,7 @@
              x:Class="IHerb_BAD.MVVM.View.AnalysiesManager"
               NavigationPage.HasNavigationBar="False">
     <ContentPage.Content>
-        <StackLayout 
+        <StackLayout
             VerticalOptions="FillAndExpand"
             Orientation="Vertical">
             <StackLayout Orientation="Horizontal">
@@ -29,10 +29,8 @@
                             HorizontalTextAlignment="Center"                                                        
                             TextColor="#618574"
                             FontAttributes="Bold"
-                            FontFamily="Roboto"
-                        />
+                            FontFamily="Roboto"/>
             </StackLayout>
-
             <Frame
                   BackgroundColor="#96CEB4"
                   HeightRequest="600"
@@ -58,8 +56,7 @@
                         TextHighlightMode="MultipleOccurrence"
                         SelectedDropDownItemColor="#618574"
                         TextColor="#3EB574"
-                        TextSize="20"
-                        >
+                        TextSize="20">
                         <combobox:SfComboBox.ComboBoxSource>
                             <ListCollection:List x:TypeArguments="x:String">
                             </ListCollection:List>
@@ -87,9 +84,7 @@
                             UnselectedItemFontSize="20"
                             SelectedItemFontSize="20"                                              
                             BackgroundColor="#96CEB4"
-                            BorderColor="Transparent"                        
-                        >
-
+                            BorderColor="Transparent">
                         </sync:SfDatePicker>
                     </RelativeLayout>
                     <buttons:SfButton
@@ -103,8 +98,6 @@
                         Margin="0,60"/>
                 </StackLayout>
             </Frame>
-
         </StackLayout>
-        
     </ContentPage.Content>
 </ContentPage>

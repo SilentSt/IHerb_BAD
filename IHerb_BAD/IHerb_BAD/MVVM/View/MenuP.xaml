@@ -6,7 +6,7 @@
              xmlns:buttons="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms"
              xmlns:border="clr-namespace:Syncfusion.XForms.Border;assembly=Syncfusion.Core.XForms" 
              xmlns:local="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin"
-             x:Class="IHerb_BAD.MVVM.View.Menu"
+             x:Class="IHerb_BAD.MVVM.View.MenuP"
              NavigationPage.HasNavigationBar="False">
     <ContentPage.Content>
         <StackLayout 

@@ -15,7 +15,7 @@ namespace IHerb_BAD.MVVM.View
         public Analysis(User user)
         {
             InitializeComponent();
-            BindingContext = new AnalysisModelView(user);
+            BindingContext = new AnalysisModelView(user){Navigation = this.Navigation};
         }
 
     }

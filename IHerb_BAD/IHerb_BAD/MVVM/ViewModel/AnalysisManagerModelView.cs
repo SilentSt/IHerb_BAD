@@ -23,7 +23,7 @@ namespace IHerb_BAD.MVVM.ViewModel
         public void SaveAndGo()
         {
             _user.AnalyseData.Add(new AnalyseData(){type = AnalyseType.OO_Blood, stats = AnalyseGetter.getter[AnalyseType.OO_Blood]});
-            Navigation.PushAsync(new Analysis(_user));
+            Navigation.PushModalAsync(new Analysis(_user));
         }
     }
 }
