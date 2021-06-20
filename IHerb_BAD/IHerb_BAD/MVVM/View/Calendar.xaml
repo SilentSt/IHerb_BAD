@@ -4,6 +4,7 @@
              xmlns:border="clr-namespace:Syncfusion.XForms.Border;assembly=Syncfusion.Core.XForms"
              xmlns:custom="clr-namespace:IHerb_BAD" xmlns:combobox="clr-namespace:Syncfusion.XForms.ComboBox;assembly=Syncfusion.SfComboBox.XForms"
              xmlns:sync="clr-namespace:Syncfusion.SfCalendar.XForms;assembly=Syncfusion.SfCalendar.XForms" xmlns:buttons="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms"
+             xmlns:generic="clr-namespace:System.Collections.Generic;assembly=netstandard"
              x:Class="IHerb_BAD.MVVM.View.Calendar"
              NavigationPage.HasNavigationBar="False"
              BackgroundColor="#CEA47D">
@@ -47,28 +48,36 @@
                     BorderWidth="3"                    
                     HasShadow="True">
                                 <combobox:SfComboBox 
-                        HeightRequest="40" 
-                        Text="{Binding CalendarType}"
-                        x:Name="comboBox"
-                        Margin="40,0"                      
-                        BorderColor="Transparent"
-                        DropDownBackgroundColor="#96CEB4"
-                        DropDownBorderColor="#FFEEAD"
-                        DropDownCornerRadius="15"
-                        DropDownTextColor="#FFEEAD"
-                        DropDownTextSize="15"
-                        TextHighlightMode="MultipleOccurrence"
-                        SelectedDropDownItemColor="#618574"
-                        TextColor="#CEA47D"
-                        TextSize="20"                               
-                        >
+                                    HeightRequest="40" 
+                                    Text="{Binding CalendarType}"
+                                    SelectionChanged="ComboBox_OnSelectionChanged"
+                                    x:Name="comboBox"
+                                    Margin="40,0"                      
+                                    BorderColor="Transparent"
+                                    DropDownBackgroundColor="#96CEB4"
+                                    DropDownBorderColor="#FFEEAD"
+                                    DropDownCornerRadius="15"
+                                    DropDownTextColor="#FFEEAD"
+                                    DropDownTextSize="15"
+                                    TextHighlightMode="MultipleOccurrence"
+                                    SelectedDropDownItemColor="#618574"
+                                    TextColor="#CEA47D"
+                                    TextSize="20">
+                                    <combobox:SfComboBox.ComboBoxSource>
+                                        <generic:List x:TypeArguments="x:String">
+                                            <x:String>Анализы</x:String>
+                                            <x:String>Больничный</x:String>
+                                            <x:String>Беременность</x:String>
+                                        </generic:List>
+                                    </combobox:SfComboBox.ComboBoxSource>
                                 </combobox:SfComboBox>
                             </border:SfBorder>
                             <sync:SfCalendar
-                HorizontalOptions="Center"
-                BackgroundColor="#FFF"
+                                x:Name="calendarr"
+                                HorizontalOptions="Center"
+                            BackgroundColor="#FFF"
                             SelectedDates="{Binding SelectedDates}"
-                >
+                            SelectionMode="MultiSelection">
                             </sync:SfCalendar>
                         </StackLayout>
                     </Frame>
@@ -86,6 +95,6 @@
                         />
             </StackLayout>
         </ScrollView>
-        
+
     </ContentPage.Content>
 </ContentPage>
